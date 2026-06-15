@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박소현 포트폴리오</title>
+    <meta
+      name="description"
+      content="프론트엔드 개발자 박소현 포트폴리오"
+    />
+<!--    <meta name="author" content="Ellie" />-->
+    <link rel="icon" type="image/png" href="static/imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <script src="static/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <i class="fab fa-diaspora"></i>
+        <a href="#">박소현 포트폴리오</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item active" data-link="#home">HOME</li>
+        <li class="navbar__menu__item" data-link="#about">ABOUT</li>
+        <li class="navbar__menu__item" data-link="#skills">SKILLS</li>
+        <li class="navbar__menu__item" data-link="#work">PROJECTS</li>
+<!--        <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>-->
+<!--        <li class="navbar__menu__item" data-link="#contact">CONTACT</li>-->
+      </ul>
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="home__container">
+        <img
+          src="static/imgs/profile.jpg"
+          alt="Ellie's profile photo"
+          class="home__avatar"/>
+        <h1 class="home__title">WEB DEVELOPER<br />PORTFOLIO</h1>
+        <h2 class="home__description">
+          서비스를 이해하고 플랫폼의 확장성을 고민하여 개발하는<br />7년차 엔지니어 박소현 입니다
+        </h2>
+        <button class="home__contact">Contact Me</button>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="section__container">
+        <h1>ABOUT</h1>
+        <div class="about__layout">
+          <div class="about__content">
+            <h2 class="about__subtitle">저는 이런사람 입니다</h2>
+            <ul class="about__list">
+              <li>
+                <span class="about__list__icon"><i class="fas fa-check"></i></span>
+                <span>사용자의 관점에서 고민하며 더 나은 경험을 만드는 것을 중요하게 생각합니다.</span>
+              </li>
+              <li>
+                <span class="about__list__icon"><i class="fas fa-check"></i></span>
+                <span>플랫폼의 확장성 및 유지보수성을 고려하며 개발합니다.</span>
+              </li>
+              <li>
+                <span class="about__list__icon"><i class="fas fa-check"></i></span>
+                <span>맡은 업무는 주인의식을 가지고 끝까지 책임집니다.</span>
+              </li>
+              <li>
+                <span class="about__list__icon"><i class="fas fa-check"></i></span>
+                <span>반복 업무를 줄이고 생산성을 높이는 데 관심이 많습니다.</span>
+              </li>
+            </ul>
+          </div>
+          <aside id="contact" class="contact__container">
+            <h2 class="contact__title">CONTACT</h2>
+            <div class="contact__links">
+              <button class="contact__link contact__link--copy" type="button" data-copy="dso753@naver.com">
+              <span class="contact__link__label">
+                <i class="fas fa-envelope"></i>
+                <span class="contact__link__text">Email</span>
+              </span>
+                <span class="contact__link__action" aria-hidden="true">
+                <i class="fas fa-copy"></i>
+              </span>
+              </button>
+              <a class="contact__link" href="https://github.com/doitdso753" target="_blank" rel="noopener noreferrer">
+              <span class="contact__link__label">
+                <i class="fab fa-github"></i>
+                <span class="contact__link__text">GitHub</span>
+              </span>
+                <span class="contact__link__action" aria-hidden="true">
+                <i class="fas fa-external-link-alt"></i>
+              </span>
+              </a>
+              <a class="contact__link" href="https://docs.google.com/document/d/e/2PACX-1vS86whZKFCdrRbejlnQLJX_5Az2KzQevcv8EnM21UMyXlCdt5vB1Fa60qGSWhIgC8vscwXr0oZ1xsAx/pub" target="_blank" rel="noopener noreferrer">
+              <span class="contact__link__label">
+                <i class="fas fa-file-alt"></i>
+                <span class="contact__link__text">경력기술서</span>
+              </span>
+                <span class="contact__link__action" aria-hidden="true">
+                <i class="fas fa-external-link-alt"></i>
+              </span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>SKILLS</h1>
+        <div class="skills__list">
+          <article class="skill-item open">
+            <button class="skill-item__header" type="button" aria-expanded="true">
+              <span class="skill-item__title">React</span>
+              <span class="skill-item__meta">Component UI</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <p>
+                컴포넌트 단위 설계와 Hooks 기반 상태 관리를 활용해 재사용 가능한 화면 구조를 만들고,
+                사용자 흐름에 맞춘 인터랙션을 구현할 수 있습니다.
+              </p>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">Node.js</span>
+              <span class="skill-item__meta">Server API</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <p>
+                Express 기반 라우팅, 정적 파일 제공, API 응답 처리처럼 프론트엔드와 맞닿는 서버 기능을
+                안정적으로 구성할 수 있습니다.
+              </p>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">Next.js</span>
+              <span class="skill-item__meta">Full Stack</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <p>
+                라우팅 구조, 서버 사이드 렌더링, API Route를 활용해 초기 로딩과 검색 노출을 고려한
+                웹 서비스를 구현할 수 있습니다.
+              </p>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">PHP Laravel</span>
+              <span class="skill-item__meta">Backend</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <p>
+                MVC 구조를 바탕으로 인증, 데이터 모델링, 관리자 기능을 구성하고 Blade 템플릿과 연동한
+                서비스 화면을 개발할 수 있습니다.
+              </p>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">Vue.js</span>
+              <span class="skill-item__meta">SPA</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <p>
+                Vue 컴포넌트 구조와 상태 흐름을 이해하고, API 연동과 화면 단위 유지보수를 고려한
+                SPA 기능을 구현할 수 있습니다.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section">
+     <div class="section__container">
+      <h1>PROJECTS</h1>
+      <div class="work__categories">
+        <button class="category__btn selected" data-filter="geditor-service">
+          웹 에디터 서비스
+        </button>
+        <button class="category__btn" data-filter="hiselling-service">
+          쇼핑몰통합관리 서비스
+        </button>
+        <button class="category__btn" data-filter="ttowayo-service">
+          매장 마케팅 서비스
+        </button>
+      </div>
+      <div class="work__projects">
+        <article class="project-panel" data-type="geditor-service">
+          <button
+            class="project-panel__media"
+            type="button"
+            data-image="static/imgs/projects/geditor/geditor-service-image.png"
+            data-alt="웹 에디터 서비스"
+            aria-label="웹 에디터 서비스 크게 보기"
+          >
+            <img
+              class="project-panel__img"
+              src="static/imgs/projects/geditor/geditor-service-image.png"
+              alt="웹 에디터 서비스"
+            />
+          </button>
+          <div class="project-panel__content">
+            <h2 class="project-panel__title">웹 에디터 서비스</h2>
+            <p class="project-panel__description">
+              콘텐츠 작성과 편집 흐름을 웹에서 처리할 수 있는 에디터형 서비스입니다. 사용자가 입력한 콘텐츠를 안정적으로 다루고 미리보기와 저장 흐름을 자연스럽게 연결하는 UI를 목표로 했습니다.
+            </p>
+            <ul class="project-panel__list">
+              <li>Javascript 기반 인터랙션 구현</li>
+              <li>입력, 편집, 미리보기 영역의 화면 구성</li>
+              <li>콘텐츠 작성 흐름에 맞춘 사용자 경험 개선</li>
+            </ul>
+            <dl class="project-panel__meta">
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  <span class="sr-only">기간</span>
+                </dt>
+                <dd><span class="project-panel__meta__period">2024</span></dd>
+              </div>
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                  <span class="sr-only">기술 스택</span>
+                </dt>
+                <dd>PHP Laravel, jQuery, Python</dd>
+              </div>
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span class="sr-only">협업 툴</span>
+                </dt>
+                <dd>Gitlab, Confluence, Slack</dd>
+              </div>
+            </dl>
+<!--            <a class="project-panel__link" href="https://github.com/ParkSoHyeon/InteractiveWebNoReference" target="_blank" rel="noopener noreferrer">-->
+<!--              <span>자세히보기</span>-->
+<!--              <span aria-hidden="true">&gt;</span>-->
+<!--            </a>-->
+          </div>
+        </article>
+        <article class="project-panel invisible" data-type="hiselling-service">
+          <button
+                  class="project-panel__media"
+                  type="button"
+                  data-image="static/imgs/projects/hiselling/hiselling-service-image.png"
+                  data-alt="쇼핑몰통합관리 서비스"
+                  aria-label="쇼핑몰통합관리 서비스 크게 보기"
+          >
+            <img
+                    class="project-panel__img"
+                    src="static/imgs/projects/hiselling/hiselling-service-image.png"
+                    alt="쇼핑몰통합관리 서비스"
+            />
+          </button>
+          <div class="project-panel__content">
+            <h2 class="project-panel__title">쇼핑몰통합관리 서비스</h2>
+            <p class="project-panel__description">
+              여러 판매 채널의 주문, 상품, 정산 데이터를 한 화면에서 확인하고 관리할 수 있는 업무형 서비스 UI입니다. 반복 작업을 줄이고 데이터 확인 흐름을 빠르게 만드는 데 초점을 맞췄습니다.
+            </p>
+            <ul class="project-panel__list">
+              <li>목록, 필터, 상세 화면 중심의 관리 UI 설계</li>
+              <li>주문과 상품 데이터를 다루는 화면 구조 구현</li>
+              <li>업무 흐름에 맞춘 반응형 레이아웃 구성</li>
+            </ul>
+            <dl class="project-panel__meta">
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  <span class="sr-only">기간</span>
+                </dt>
+                <dd><span class="project-panel__meta__period">2023</span></dd>
+              </div>
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                  <span class="sr-only">기술 스택</span>
+                </dt>
+                <dd>React, Redux, Node.js, Next.js</dd>
+              </div>
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span class="sr-only">협업 툴</span>
+                </dt>
+                <dd>Gitlab, Jira, Confluence</dd>
+              </div>
+            </dl>
+<!--            <a class="project-panel__link" href="https://dso753-do-it-example.herokuapp.com" target="_blank" rel="noopener noreferrer">-->
+<!--              <span>자세히보기</span>-->
+<!--              <span aria-hidden="true">&gt;</span>-->
+<!--            </a>-->
+          </div>
+        </article>
+        <article class="project-panel invisible" data-type="ttowayo-service">
+          <button
+                  class="project-panel__media"
+                  type="button"
+                  data-image="static/imgs/projects/ttowayo/ttowayo-service-image.png"
+                  data-alt="매장 마케팅 서비스"
+                  aria-label="매장 마케팅 서비스 크게 보기"
+          >
+            <img
+                    class="project-panel__img"
+                    src="static/imgs/projects/ttowayo/ttowayo-service-image.png"
+                    alt="매장 마케팅 서비스"
+            />
+          </button>
+          <div class="project-panel__content">
+            <h2 class="project-panel__title">매장 마케팅 서비스</h2>
+            <p class="project-panel__description">
+              소상공인 매장의 고객 관리와 재방문 마케팅을 지원하는 서비스입니다. 모바일웹과 대시보드 화면을 통해 매장 운영자가 고객 현황을 확인하고 마케팅 활동을 관리할 수 있도록 구성했습니다.
+            </p>
+            <ul class="project-panel__list">
+              <li>Vue.js 기반 SPA 화면 개발</li>
+              <li>고객 관리 대시보드와 모바일웹 UI 구현</li>
+              <li>API 연동, 화면 상태 처리, 운영 이슈 유지보수</li>
+            </ul>
+            <dl class="project-panel__meta">
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                  <span class="sr-only">기간</span>
+                </dt>
+                <dd><span class="project-panel__meta__period">2021</span></dd>
+              </div>
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-code" aria-hidden="true"></i>
+                  <span class="sr-only">기술 스택</span>
+                </dt>
+                <dd>Vue.js, Android, PHP Laravel</dd>
+              </div>
+              <div class="project-panel__meta__item">
+                <dt>
+                  <i class="fas fa-users" aria-hidden="true"></i>
+                  <span class="sr-only">협업 툴</span>
+                </dt>
+                <dd>Github, Notion</dd>
+              </div>
+            </dl>
+<!--            <a class="project-panel__link" href="/ttowayo-dashbord-site" target="_blank" rel="noopener noreferrer">-->
+<!--              <span>자세히보기</span>-->
+<!--              <span aria-hidden="true">&gt;</span>-->
+<!--            </a>-->
+          </div>
+        </article>
+      </div>
+     </div>
+    </section>
+
+    <div class="image-modal" aria-hidden="true">
+      <button class="image-modal__close" type="button" aria-label="이미지 크게 보기 닫기">
+        <i class="fas fa-times"></i>
+      </button>
+      <img class="image-modal__img" src="" alt="" />
+    </div>
+
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
+</html>
