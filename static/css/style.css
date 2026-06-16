@@ -337,8 +337,8 @@ p {
 .skills__list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  margin-top: 48px;
+  gap: 16px;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -360,14 +360,24 @@ p {
 
 .skill-item__header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto 18px;
   align-items: center;
-  gap: 18px;
   width: 100%;
-  padding: 22px 26px;
   color: var(--color-dark-grey);
   font-family: inherit;
   text-align: left;
+  grid-template-columns: minmax(0, 1fr) 18px;
+  gap: 12px;
+  padding: 20px;
+}
+
+.skill-item__header i {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.skill-item__meta {
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 .skill-item__title {
@@ -849,31 +859,6 @@ button.contact__link {
 
   .major {
     margin-bottom: 30px;
-  }
-
-  .skills__list {
-    gap: 16px;
-    margin-top: 30px;
-  }
-
-  .skill-item__header {
-    grid-template-columns: minmax(0, 1fr) 18px;
-    gap: 12px;
-    padding: 20px;
-  }
-
-  .skill-item__meta {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-
-  .skill-item__header i {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .skill-item__content p {
-    padding: 0 20px 22px;
   }
 
   .category__btn {
