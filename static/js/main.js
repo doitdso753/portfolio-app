@@ -107,40 +107,6 @@ workBtnContainer.addEventListener('click', (e) => {
   }, 300);
 });
 
-// Project image modal
-const imageModal = document.querySelector('.image-modal');
-const imageModalImg = document.querySelector('.image-modal__img');
-const imageModalCloseBtn = document.querySelector('.image-modal__close');
-const projectMediaBtns = document.querySelectorAll('.project-panel__media');
-
-projectMediaBtns.forEach((button) => {
-  button.addEventListener('click', () => {
-    imageModalImg.src = button.dataset.image;
-    imageModalImg.alt = button.dataset.alt;
-    imageModal.classList.add('open');
-    imageModal.setAttribute('aria-hidden', 'false');
-  });
-});
-
-imageModal.addEventListener('click', (event) => {
-  if (event.target === imageModal || event.target.closest('.image-modal__close') === imageModalCloseBtn) {
-    closeImageModal();
-  }
-});
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape' && imageModal.classList.contains('open')) {
-    closeImageModal();
-  }
-});
-
-function closeImageModal() {
-  imageModal.classList.remove('open');
-  imageModal.setAttribute('aria-hidden', 'true');
-  imageModalImg.src = '';
-  imageModalImg.alt = '';
-}
-
 // 이메일 클립 복사
 const copyEmailBtn = document.querySelector('.contact__link--copy');
 if (copyEmailBtn != null) {
