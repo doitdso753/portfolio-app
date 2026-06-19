@@ -1,5 +1,7 @@
 'use strict';
 
+const common = window.PortfolioCommon;
+
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -20,7 +22,7 @@ navbarMenu.addEventListener('click', (event) => {
     return;
   }
   navbarMenu.classList.remove('open');
-  scrollIntoView(link);
+  common.scrollIntoView(link);
 });
 
 // Navbar toggle button for small screen
@@ -32,7 +34,7 @@ navbarToggleBtn.addEventListener('click', () => {
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
-  scrollIntoView('#about');
+  common.scrollIntoView('#about');
 });
 
 // Make home slowly fade to transparent as the window scrolls down
@@ -61,19 +63,9 @@ skillItems.forEach((item) => {
   });
 });
 
-// Show "arrow up" button when scrolling down
-const arrowUp = document.querySelector('.arrow-up');
-document.addEventListener('scroll', () => {
-  if (window.scrollY > homeHeight / 2) {
-    arrowUp.classList.add('visible');
-  } else {
-    arrowUp.classList.remove('visible');
-  }
-});
-
-// Handle click on the "arrow up" button
-arrowUp.addEventListener('click', () => {
-  scrollIntoView('#home');
+common.initArrowUp({
+  targetSelector: '#home',
+  triggerOffset: homeHeight / 2,
 });
 
 // Projects
@@ -111,30 +103,8 @@ workBtnContainer.addEventListener('click', (e) => {
 const copyEmailBtn = document.querySelector('.contact__link--copy');
 if (copyEmailBtn != null) {
   copyEmailBtn.addEventListener('click', () => {
-    copyText(copyEmailBtn.dataset.copy).then(() => {
+    common.copyText(copyEmailBtn.dataset.copy).then(() => {
       alert('복사 완료되었습니다.')
     });
   });
-}
-
-function copyText(text) {
-  if (navigator.clipboard != null) {
-    return navigator.clipboard.writeText(text);
-  }
-
-  const textarea = document.createElement('textarea');
-  textarea.value = text;
-  textarea.setAttribute('readonly', '');
-  textarea.style.position = 'fixed';
-  textarea.style.opacity = '0';
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand('copy');
-  document.body.removeChild(textarea);
-  return Promise.resolve();
-}
-
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
