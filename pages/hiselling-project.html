@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박소현 포트폴리오 - 쇼핑몰통합관리 서비스</title>
+    <meta
+      name="description"
+      content="박소현 포트폴리오 - 쇼핑몰통합관리 서비스"
+    />
+<!--    <meta name="author" content="Ellie" />-->
+    <link rel="icon" type="image/png" href="../static/imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="../static/js/common.js" defer></script>
+    <script src="../static/js/image-modal.js" defer></script>
+    <script src="../static/js/detail.js" defer></script>
+  </head>
+  <body>
+    <section id="detail-panel" class="section">
+      <div class="section__container detail-panel">
+        <h1>쇼핑몰통합관리 서비스</h1>
+
+        <div class="detail-list">
+          <article class="detail-note" data-detail-item>
+            <p class="detail-item__label">담당업무</p>
+            <ul class="content-list">
+              <li>쇼핑몰 통합관리 화면 개발 및 공통 컴포넌트 설계 - React, Redux</li>
+              <li>상품, 주문, 배송 관리 API 설계 및 개발 - Node.js</li>
+              <li>관리자 사이트 구축 및 기능 개발 - Next.js, React</li>
+            </ul>
+<!--            <a class="detail-item__text-link" href="https://www.clickn.co.kr/event/withhiselling" target="_blank" rel="noopener noreferrer">-->
+<!--              <span>서비스 구경하기</span>-->
+<!--              <i class="fas fa-external-link-alt" aria-hidden="true"></i>-->
+<!--            </a>-->
+          </article>
+
+          <article class="detail-item" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">시스템 구성도</p>
+              <p>
+                UI Service(React)와 Backend/Core Service(Node.js)로 구성된 쇼핑몰 통합관리 서비스의 개발 및 운영을 담당했습니다.<br />
+                사용자는 UI Service를 통해 상품, 주문, 배송 관리 기능을 이용하며, UI Bridge가 Backend Service와 연동하여 비즈니스 기능을 제공합니다.
+                Backend Service는 도메인별 API로 구성해 기능별 책임을 분리하고 Kafka 메시지 큐로 Backend Service 작업을 비동기로 처리합니다.
+                Next.js 기반 Admin Service에서 마켓 기초 데이터 등 운영 기능을 관리할 수 있도록 구현했습니다.
+                Docker/Kubernetes 컨테이너 환경에서 서비스를 운영했습니다.
+              </p>
+            </div>
+            <button
+              class="detail-item__gallery"
+              type="button"
+              data-image-modal-trigger
+              data-image-modal-src="../static/imgs/projects/hiselling/hiselling-system-architecture.svg"
+              data-image-modal-alt="또와요 시스템 구성도"
+              aria-label="또와요 시스템 구성도 크게 보기"
+            >
+              <img src="../static/imgs/projects/hiselling/hiselling-system-architecture.svg" alt="또와요 시스템 구성도" />
+            </button>
+          </article>
+
+          <article class="detail-item detail-item--reverse" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">서비스 화면</p>
+              <p></p>
+            </div>
+            <div class="detail-gallery" aria-label="관리자 페이지 화면 모음">
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-site-01.png"
+                data-image-modal-alt="대시보드 화면"
+                aria-label="대시보드 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-site-01.png" alt="대시보드 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-site-02.png"
+                data-image-modal-alt="고객 관리 화면"
+                aria-label="고객 관리 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-site-02.png" alt="고객 관리 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-site-03.png"
+                data-image-modal-alt="쿠폰 내역 화면"
+                aria-label="쿠폰 내역 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-site-03.png" alt="쿠폰 내역 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-site-04.png"
+                data-image-modal-alt="통계분석 화면"
+                aria-label="통계분석 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-site-04.png" alt="통계분석 화면" />
+              </button>
+            </div>
+          </article>
+
+          <article class="detail-item" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">백오피스 화면</p>
+              <p>마켓 기초 데이터 등 운영 기능을 관리할 수 있도록 구현했습니다. </p>
+            </div>
+            <div class="detail-gallery" aria-label="관리자 페이지 화면 모음">
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-backoffice-site-01.png"
+                data-image-modal-alt="대시보드 화면"
+                aria-label="대시보드 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-backoffice-site-01.png" alt="대시보드 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-backoffice-site-02.png"
+                data-image-modal-alt="표준-마켓 카테고리 매핑 화면"
+                aria-label="표준-마켓 카테고리 매핑 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-backoffice-site-02.png" alt="표준-마켓 카테고리 매핑 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-backoffice-site-03.png"
+                data-image-modal-alt="표준->마켓 카테고리 매핑 화면"
+                aria-label="표준->마켓 카테고리 매핑 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-backoffice-site-03.png" alt="표준->마켓 카테고리 매핑 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/hiselling/hiselling-backoffice-site-04.png"
+                data-image-modal-alt="DB 엑셀 일괄 등록 화면"
+                aria-label="DB 엑셀 일괄 등록 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/hiselling/hiselling-backoffice-site-04.png" alt="DB 엑셀 일괄 등록 화면" />
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="image-modal" aria-hidden="true">
+      <button class="image-modal__close" type="button" aria-label="이미지 크게 보기 닫기">
+        <i class="fas fa-times"></i>
+      </button>
+      <img class="image-modal__img" src="" alt="" />
+    </div>
+
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
+</html>

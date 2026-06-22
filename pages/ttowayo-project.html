@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박소현 포트폴리오 - 적립&매장 마케팅 서비스</title>
+    <meta
+      name="description"
+      content="박소현 포트폴리오 - 적립&매장 마케팅 서비스"
+    />
+<!--    <meta name="author" content="Ellie" />-->
+    <link rel="icon" type="image/png" href="../static/imgs/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="../static/js/common.js" defer></script>
+    <script src="../static/js/image-modal.js" defer></script>
+    <script src="../static/js/detail.js" defer></script>
+  </head>
+  <body>
+    <section id="detail-panel" class="section">
+      <div class="section__container detail-panel">
+        <h1>적립&매장 마케팅 서비스</h1>
+
+        <div class="detail-list">
+          <article class="detail-note" data-detail-item>
+            <p class="detail-item__label">담당업무</p>
+            <ul class="content-list">
+              <li>고객용 하이브리드 모바일 앱 개발 - Vue.js, Android</li>
+              <li>매장용 POS 앱 개발 - Windows Forms</li>
+              <li>관리자 사이트 기능 개발 - PHP Laravel, Javascript</li>
+            </ul>
+<!--            <a class="detail-item__text-link" href="https://www.youtube.com/watch?v=CvtBBSZ8T5M" target="_blank" rel="noopener noreferrer">-->
+<!--              <span>서비스 구경하기</span>-->
+<!--              <i class="fas fa-external-link-alt" aria-hidden="true"></i>-->
+<!--            </a>-->
+          </article>
+
+          <article class="detail-item" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">시스템 구성도</p>
+              <p>
+                고객용 모바일 앱, 매장 POS 앱, 관리자 사이트로 구성된 적립&매장 마케팅 서비스의 개발 및 운영을 담당했습니다.<br>
+                모바일 앱과 POS 앱은 Service API를 통해 회원, 적립, 쿠폰, 선물 데이터를 처리하도록 설계했으며, 결제 기능은 별도 Pay API로 분리해 PG사 연동했습니다.<br>
+                관리자 사이트는 Laravel 기반으로 구축하여 매장, 쿠폰, 이벤트, 회원 정보를 통합 관리할 수 있도록 구현했습니다.<br>
+                서비스 데이터는 MySQL에 저장하고 이미지 및 첨부 파일은 Object Storage에 분리 저장했습니다.
+              </p>
+            </div>
+            <button
+              class="detail-item__gallery"
+              type="button"
+              data-image-modal-trigger
+              data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg"
+              data-image-modal-alt="또와요 시스템 구성도"
+              aria-label="또와요 시스템 구성도 크게 보기"
+            >
+              <img src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" alt="또와요 시스템 구성도" />
+            </button>
+          </article>
+
+          <article class="detail-item detail-item--reverse" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">모바일 앱 화면</p>
+              <p>고객은 모바일 앱에서 매장별 적립 상태와 쿠폰을 확인하고, 매장에서 제공하는 헤택을 확인할 수 있습니다.</p>
+            </div>
+            <div class="detail-gallery detail-gallery--portrait" aria-label="앱 화면 모음">
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-app-01.png"
+                data-image-modal-alt="또와요 앱 메인 화면"
+                aria-label="또와요 앱 메인 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-app-01.png" alt="또와요 앱 메인 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-app-02.jpg"
+                data-image-modal-alt="또와요 앱 매장 상세 화면"
+                aria-label="또와요 앱 매장 상세 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-app-02.jpg" alt="또와요 앱 매장 상세 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-app-03.jpg"
+                data-image-modal-alt="또와요 앱 쿠폰함 화면"
+                aria-label="또와요 앱 쿠폰함 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-app-03.jpg" alt="또와요 앱 쿠폰함 화면" />
+              </button>
+            </div>
+          </article>
+
+          <article class="detail-item" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">관리자 사이트 화면</p>
+              <p>또와요 서비스에 계약한 사장님께 도장/포인트 적립 관리, 쿠폰 관리, 고객 관리를 위해 제공하는 관리자 사이트입니다.</p>
+            </div>
+            <div class="detail-gallery" aria-label="관리자 페이지 화면 모음">
+              <button
+                      class="detail-item__gallery-item"
+                      type="button"
+                      data-image-modal-trigger
+                      data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-01.png"
+                      data-image-modal-alt="대시보드 화면"
+                      aria-label="대시보드 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-01.png" alt="대시보드 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-02.png"
+                data-image-modal-alt="고객 관리 화면"
+                aria-label="고객 관리 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-02.png" alt="고객 관리 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-03.png"
+                data-image-modal-alt="쿠폰 내역 화면"
+                aria-label="쿠폰 내역 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-03.png" alt="쿠폰 내역 화면" />
+              </button>
+              <button
+                class="detail-item__gallery-item"
+                type="button"
+                data-image-modal-trigger
+                data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-04.png"
+                data-image-modal-alt="통계분석 화면"
+                aria-label="통계분석 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-04.png" alt="통계분석 화면" />
+              </button>
+            </div>
+          </article>
+
+
+          <article class="detail-item detail-item--reverse" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">POS 앱 화면</p>
+              <p>
+                사장님이 매장에서 QR 코드나 핸드폰 번호만으로 고객에게 쉽게 적립, 쿠폰/선물 사용할 수 있도록 제공하는 POS 앱입니다.
+              </p>
+            </div>
+            <div class="detail-gallery" aria-label="POS 앱 화면 모음">
+              <button
+                      class="detail-item__gallery-item"
+                      type="button"
+                      data-image-modal-trigger
+                      data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-pos-app-01.png"
+                      data-image-modal-alt="대시보드 화면"
+                      aria-label="대시보드 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-pos-app-01.png" alt="대시보드 화면" />
+              </button>
+              <button
+                      class="detail-item__gallery-item"
+                      type="button"
+                      data-image-modal-trigger
+                      data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-pos-app-02.png"
+                      data-image-modal-alt="고객 관리 화면"
+                      aria-label="고객 관리 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-pos-app-02.png" alt="고객 관리 화면" />
+              </button>
+              <button
+                      class="detail-item__gallery-item"
+                      type="button"
+                      data-image-modal-trigger
+                      data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-pos-app-03.PNG"
+                      data-image-modal-alt="쿠폰 내역 화면"
+                      aria-label="쿠폰 내역 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-pos-app-03.PNG" alt="쿠폰 내역 화면" />
+              </button>
+              <button
+                      class="detail-item__gallery-item"
+                      type="button"
+                      data-image-modal-trigger
+                      data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-pos-app-04.png"
+                      data-image-modal-alt="통계분석 화면"
+                      aria-label="통계분석 화면 크게 보기"
+              >
+                <img src="../static/imgs/projects/ttowayo/ttowayo-pos-app-04.png" alt="통계분석 화면" />
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="image-modal" aria-hidden="true">
+      <button class="image-modal__close" type="button" aria-label="이미지 크게 보기 닫기">
+        <i class="fas fa-times"></i>
+      </button>
+      <img class="image-modal__img" src="" alt="" />
+    </div>
+
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+  </body>
+</html>
