@@ -631,10 +631,6 @@ p {
   margin: 4px 0;
 }
 
-.detail-note .content-list li {
-  color: var(--color-light-grey);
-}
-
 .detail-note {
   position: relative;
   padding: 22px 28px 22px 32px;
@@ -694,7 +690,7 @@ p {
 
 .detail-item p,
 .detail-note p {
-  color: var(--color-light-grey);
+  color: var(--color-dark-grey);
   font-size: var(--font-small);
   line-height: 1.8;
 }
