@@ -32,10 +32,12 @@
           <article class="detail-note" data-detail-item>
             <p class="detail-item__label">담당업무</p>
             <ul class="content-list">
-              <li>고객용 하이브리드 모바일 앱 개발 - Vue.js, Android</li>
-              <li>매장용 POS 앱 개발 - Windows Forms</li>
-              <li>관리자 사이트 기능 개발 - PHP Laravel, Javascript</li>
-              <li>기능 추가에 따른 DB 스키마 설계 - MySQL</li>
+              <li>Android 하이브리드 모바일 앱 개발</li>
+              <li>Vue.js 기반 화면 개발</li>
+              <li>KCP 결제 API 연동</li>
+              <li>매장용 POS 앱 개발</li>
+              <li>관리자 사이트 기능 개발</li>
+              <li>기능 추가에 따른 DB 스키마 설계</li>
             </ul>
 <!--            <a class="detail-item__text-link" href="https://www.youtube.com/watch?v=CvtBBSZ8T5M" target="_blank" rel="noopener noreferrer">-->
 <!--              <span>서비스 구경하기</span>-->
@@ -43,32 +45,23 @@
 <!--            </a>-->
           </article>
 
-          <article class="detail-item" data-detail-item>
-            <div class="detail-item__content">
-              <p class="detail-item__label">시스템 구성도</p>
-              <p>
-                고객용 모바일 앱, 매장 POS 앱, 관리자 사이트로 구성된 적립&매장 마케팅 서비스의 개발 및 운영을 담당했습니다.<br>
-                모바일 앱과 POS 앱은 Service API를 통해 회원, 적립, 쿠폰, 선물 데이터를 처리하도록 설계했으며, 결제 기능은 별도 Pay API로 분리해 PG사 연동했습니다.<br>
-                관리자 사이트는 Laravel 기반으로 구축하여 매장, 쿠폰, 이벤트, 회원 정보를 통합 관리할 수 있도록 구현했습니다.<br>
-                서비스 데이터는 MySQL에 저장하고 이미지 및 첨부 파일은 Object Storage에 분리 저장했습니다.
-              </p>
-            </div>
-            <button
-              class="detail-item__gallery"
-              type="button"
-              data-image-modal-trigger
-              data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg"
-              data-image-modal-alt="또와요 시스템 구성도"
-              aria-label="또와요 시스템 구성도 크게 보기"
-            >
-              <img src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" alt="또와요 시스템 구성도" />
-            </button>
+          <article class="detail-note" data-detail-item>
+            <p class="detail-item__label">기술스택</p>
+            <ul class="content-list">
+              <li>Frontend: Vue.js, JavaScript, Android, C# Windows Forms, Socket.io</li>
+              <li>Backend: PHP Laravel</li>
+              <li>Database: MySQL</li>
+              <li>Tools/Infra: Linux, Ncloud Object Storage, Git, GitLab, Notion, IntelliJ</li>
+            </ul>
           </article>
 
           <article class="detail-item detail-item--reverse" data-detail-item>
             <div class="detail-item__content">
               <p class="detail-item__label">모바일 앱 화면</p>
-              <p>고객은 모바일 앱에서 매장별 적립 상태와 쿠폰을 확인하고, 매장에서 제공하는 헤택을 확인할 수 있습니다.</p>
+              <p>
+                고객은 모바일 앱에서 매장별 적립 상태와 쿠폰을 확인하고 매장에서 제공하는 혜택을 확인할 수 있습니다.<br>
+                안드로이드 네이티브 카메라와 WebView를 연동해 QR 스캔 기능을 구현하고 Socket 통신을 통해 POS에서 고객 정보를 실시간으로 조회할 수 있습니다.
+              </p>
             </div>
             <div class="detail-gallery detail-gallery--portrait" aria-label="앱 화면 모음">
               <button
@@ -107,7 +100,9 @@
           <article class="detail-item" data-detail-item>
             <div class="detail-item__content">
               <p class="detail-item__label">관리자 사이트 화면</p>
-              <p>또와요 서비스에 계약한 사장님께 도장/포인트 적립 관리, 쿠폰 관리, 고객 관리를 위해 제공하는 관리자 사이트입니다.</p>
+              <p>
+                또와요 서비스에 계약한 사장님께 도장/포인트 적립 관리, 쿠폰 관리, 고객 관리를 위해 제공하는 관리자 사이트입니다.<br>
+              </p>
             </div>
             <div class="detail-gallery" aria-label="관리자 페이지 화면 모음">
               <button
@@ -152,7 +147,6 @@
               </button>
             </div>
           </article>
-
 
           <article class="detail-item detail-item--reverse" data-detail-item>
             <div class="detail-item__content">
@@ -203,6 +197,28 @@
                 <img src="../static/imgs/projects/ttowayo/ttowayo-pos-app-04.png" alt="통계분석 화면" />
               </button>
             </div>
+          </article>
+
+          <article class="detail-item" data-detail-item>
+            <div class="detail-item__content">
+              <p class="detail-item__label">시스템 구성도</p>
+              <p>
+                고객용 모바일 앱, 매장 POS 앱, 관리자 사이트로 구성된 적립&매장 마케팅 서비스입니다.<br>
+                모바일 앱과 POS 앱은 Service API를 통해 회원, 적립, 쿠폰, 선물 데이터를 처리하도록 설계했으며, 결제 기능은 별도 Pay API로 분리해 PG사 연동했습니다.<br>
+                관리자 사이트는 Laravel 기반으로 구축하여 매장, 쿠폰, 이벤트, 회원 정보를 통합 관리할 수 있도록 구현했습니다.<br>
+                서비스 데이터는 MySQL에 저장하고 이미지 및 첨부 파일은 Object Storage에 분리 저장했습니다.
+              </p>
+            </div>
+            <button
+                    class="detail-item__gallery"
+                    type="button"
+                    data-image-modal-trigger
+                    data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg"
+                    data-image-modal-alt="또와요 시스템 구성도"
+                    aria-label="또와요 시스템 구성도 크게 보기"
+            >
+              <img src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" alt="또와요 시스템 구성도" />
+            </button>
           </article>
         </div>
       </div>
