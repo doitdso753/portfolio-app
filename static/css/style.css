@@ -1048,8 +1048,8 @@ button.contact__link {
   }
 
   .project-panel {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
     padding: 20px;
   }
 
@@ -1062,9 +1062,51 @@ button.contact__link {
     max-height: 220px;
   }
 
+  .project-panel__content {
+    min-width: 0;
+  }
+
+  .project-panel__title {
+    margin: 0 0 12px;
+    font-size: 22px;
+    line-height: 1.4;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .project-panel__description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .project-panel__meta {
+    gap: 16px;
+    margin: 24px 0;
+    padding: 20px 0;
+  }
+
   .project-panel__meta__item {
     grid-template-columns: 34px minmax(0, 1fr);
     gap: 12px;
+    align-items: start;
+  }
+
+  .project-panel__meta dd {
+    padding-top: 3px;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+  }
+
+  .project-panel__link {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    font-size: 16px;
+    padding: 12px 16px;
   }
 
   .image-modal {
