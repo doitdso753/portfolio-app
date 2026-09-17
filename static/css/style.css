@@ -448,44 +448,12 @@ p {
   color: var(--color-white);
 }
 
-.work__categories {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  width: min(100%, var(--section-readable-width));
-  margin: 40px auto;
-}
-
-.category__btn {
-  border: 1px solid var(--color-white);
-  border-radius: var(--size-border-radius);
-  font-size: var(--font-regular);
-  color: var(--color-white);
-  padding: 8px 28px;
-  position: relative;
-}
-
-.category__btn.selected,
-.category__btn:hover {
-  background-color: var(--color-white);
-  color: var(--color-dark-grey);
-}
-
 .work__projects {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
   width: 100%;
   margin-top: 40px;
-  opacity: 1;
-  transition: all var(--animation-duration) ease-out;
-}
-
-.work__projects.anim-out {
-  opacity: 0;
-  transform: scale(0.96) translateY(40px);
-}
-
-.project-panel.invisible {
-  display: none;
 }
 
 .project-panel {
@@ -1073,13 +1041,9 @@ button.contact__link {
     margin-bottom: 30px;
   }
 
-  .category__btn {
-    margin: 4px 0;
-    width: 100%;
-  }
-
-  .work__categories {
-    margin: 28px 0;
+  .work__projects {
+    gap: 24px;
+    margin-top: 28px;
   }
 
   .project-panel {

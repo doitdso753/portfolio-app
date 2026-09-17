@@ -68,37 +68,6 @@ common.initArrowUp({
   triggerOffset: homeHeight / 2,
 });
 
-// Projects
-const workBtnContainer = document.querySelector('.work__categories');
-const projectContainer = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project-panel');
-workBtnContainer.addEventListener('click', (e) => {
-  const selectedBtn = e.target.closest('.category__btn');
-  if (selectedBtn == null) {
-    return;
-  }
-  const filter = selectedBtn.dataset.filter;
-
-  // Remove selection from the previous item and select the new one
-  const active = document.querySelector('.category__btn.selected');
-  if (active != null) {
-    active.classList.remove('selected');
-  }
-  selectedBtn.classList.add('selected');
-
-  projectContainer.classList.add('anim-out');
-  setTimeout(() => {
-    projects.forEach((project) => {
-      if (filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
-    });
-    projectContainer.classList.remove('anim-out');
-  }, 300);
-});
-
 // 이메일 클립 복사
 const copyEmailBtn = document.querySelector('.contact__link--copy');
 if (copyEmailBtn != null) {
