@@ -161,40 +161,91 @@ p {
 
 /* Home */
 #home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100svh;
   background: url('../imgs/home-background.png') center/cover no-repeat;
-  padding: 120px 40px 40px;
-  text-align: center;
+  padding: 128px clamp(24px, 5vw, 64px) 64px;
+  text-align: left;
 }
 
 .home__container {
-  max-width: var(--section-readable-width);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  align-items: center;
+  gap: clamp(32px, 5vw, 64px);
+  width: 100%;
+  max-width: var(--section-content-width);
   margin: auto;
 }
 
+.home__intro {
+  min-width: 0;
+}
+
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
 
-.home__title,
-.home__description {
+.home__eyebrow,
+.home__title {
   color: var(--color-white);
 }
 
-.home__contact {
+.home__eyebrow {
+  font-size: 14px;
+  font-weight: var(--weight-semi-bold);
+  letter-spacing: 0.08em;
+  margin: 0 0 20px;
+}
+
+.home__title {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  line-height: 1.25;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.home__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.home__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
   color: var(--color-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
-  margin: 24px;
-  padding: 8px 12px;
+  padding: 12px 20px;
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
 
-.home__contact:hover {
+.home__button:hover {
   background-color: var(--color-orange);
+}
+
+.home__button:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 4px;
+}
+
+#contact {
+  scroll-margin-top: calc(var(--navbar-height) + 32px);
 }
 
 /* Section Common */
@@ -931,6 +982,24 @@ button.contact__link {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  #home {
+    padding: 96px 24px 40px;
+  }
+
+  .home__container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    max-width: 560px;
+  }
+
+  .home__avatar {
+    width: clamp(160px, 45vw, 220px);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    justify-self: center;
+  }
+
   :root {
     /* Font size */
     --font-large: 30px;

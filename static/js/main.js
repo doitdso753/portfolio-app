@@ -31,18 +31,18 @@ navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
 
-// Handle click on "contact me" button on home
-const homeContactBtn = document.querySelector('.home__contact');
-homeContactBtn.addEventListener('click', () => {
-  common.scrollIntoView('#about');
+// Handle navigation from the home action links
+document.querySelectorAll('.home__button').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    common.scrollIntoView(link.getAttribute('href'));
+  });
 });
 
-// Make home slowly fade to transparent as the window scrolls down
+// Home height determines when the back-to-top button appears
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  home.style.opacity = 1 - window.scrollY / homeHeight;
-});
 
 // Skills collapse interaction
 const skillItems = document.querySelectorAll('.skill-item');
