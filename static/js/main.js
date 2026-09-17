@@ -54,11 +54,13 @@ skillItems.forEach((item) => {
     skillItems.forEach((skillItem) => {
       skillItem.classList.remove('open');
       skillItem.querySelector('.skill-item__header').setAttribute('aria-expanded', 'false');
+      skillItem.querySelector('.skill-item__content').hidden = true;
     });
 
     if (!isOpen) {
       item.classList.add('open');
       header.setAttribute('aria-expanded', 'true');
+      item.querySelector('.skill-item__content').hidden = false;
     }
   });
 });
