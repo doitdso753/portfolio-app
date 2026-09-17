@@ -32,8 +32,8 @@
       <ul class="navbar__menu">
         <li class="navbar__menu__item active" data-link="#home">HOME</li>
         <li class="navbar__menu__item" data-link="#about">ABOUT</li>
-        <li class="navbar__menu__item" data-link="#skills">SKILLS</li>
         <li class="navbar__menu__item" data-link="#work">PROJECTS</li>
+        <li class="navbar__menu__item" data-link="#skills">SKILLS</li>
 <!--        <li class="navbar__menu__item" data-link="#contact">CONTACT</li>-->
       </ul>
       <!-- Toggle button -->
@@ -122,97 +122,6 @@
               </a>
             </div>
           </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section__container">
-        <h1>SKILLS</h1>
-        <div class="skills__list">
-          <article class="skill-item open">
-            <button class="skill-item__header" type="button" aria-expanded="true">
-              <span class="skill-item__title">React</span>
-              <span class="skill-item__meta">#Frontend #Redux #MUI</span>
-              <i class="fas fa-chevron-down" aria-hidden="true"></i>
-            </button>
-            <div class="skill-item__content">
-              <ul class="content-list">
-                <li>React 18 버전으로 쇼핑몰 통합관리 서비스를 개발했습니다.</li>
-                <li>Redux를 활용해 페이지별 상태를 관리하고 React Hook으로 팝업, 툴팁 등 공통 UI 기능의 상태와 동작 로직을 구현했습니다.</li>
-                <li>마켓 정책을 Configuration 객체로 분리하고 컴포넌트는 설정에 따라 렌더링만 수행하도록 설계했습니다.</li>
-                <li>AG-Grid를 활용해 대량의 상품/주문 데이터를 정렬, 필터링, 컬럼 관리 기능을 제공하는 공통 리스트 컴포넌트를 구현했습니다.</li>
-                <li>Atomic Design과 Storybook을 적용해 공통 컴포넌트를 관리했습니다.</li>
-                <li>ESLint, Prettier를 적용해 팀 내 코딩 컨벤션을 수립하고 코드 품질을 관리했습니다.</li>
-                <li>백오피스에서는 디자인 리소스 없이 일관된 UI를 빠르게 구현하기 위해 MUI를 활용했습니다.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="skill-item">
-            <button class="skill-item__header" type="button" aria-expanded="false">
-              <span class="skill-item__title">Node.js</span>
-              <span class="skill-item__meta">#Backend #Server API #express #puppeteer #ExcelJS</span>
-              <i class="fas fa-chevron-down" aria-hidden="true"></i>
-            </button>
-            <div class="skill-item__content">
-              <ul class="content-list">
-                <li>Node.js와 Express 기반으로 쇼핑몰 통합관리 서비스의 마켓 정책 변경에 따른 기능 개선 및 유지보수를 담당했습니다.</li>
-                <li>신규 판매 채널의 Open API 분석해 상품, 주문, 배송 데이터를 시스템과 연동하여 내부 서비스 구조에 맞게 표준화하는 API를 구현했습니다.</li>
-                <li>MSA 환경에서 셀러 인증, 상품, 주문, 배송 처리를 위한 REST API를 설계하고 YAML 워크플로우를 통해 마켓별 연동 규칙을 구현했습니다.</li>
-                <li>Open API에서 제공하지 않는 데이터는 웹 스크래핑(puppeteer) 수집으로 일관된 데이터 처리를 했습니다.</li>
-                <li>Swagger UI를 활용해 API 명세를 관리했습니다.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="skill-item">
-            <button class="skill-item__header" type="button" aria-expanded="false">
-              <span class="skill-item__title">Next.js</span>
-              <span class="skill-item__meta">#Full Stack #React #Redux #ExcelJS #express</span>
-              <i class="fas fa-chevron-down" aria-hidden="true"></i>
-            </button>
-            <div class="skill-item__content">
-              <ul class="content-list">
-                <li>Next.js 13 버전으로 쇼핑몰 통합관리 서비스의 백오피스를 개발했습니다.</li>
-                <li>반복적으로 사용되는 CRUD 화면은 공통 목록, 상세 컴포넌트로 표준화했습니다.</li>
-                <li>인증 사용자 정보 등의 전역 상태는 Redux로 관리했습니다.</li>
-                <li>CRUD 중심의 화면 특성을 고려해 SWR Hook의 서버 데이터 조회 및 캐싱 기능으로 상태 관리 부담을 줄였습니다.</li>
-                <li>RBAC 방법으로 팀 별로 메뉴의 접근 권한을 관리했습니다.</li>
-                <li>마켓 기초 데이터를 엑셀로 일괄 업로드할 수 있는 기능을 구현했습니다.</li>
-                <li>등록, 수정 등 주요 액션에 대한 로그를 기록 및 조회 기능을 구현하여 데이터 변경 이력을 추적할 수 있도록 했습니다.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="skill-item">
-            <button class="skill-item__header" type="button" aria-expanded="false">
-              <span class="skill-item__title">PHP Laravel</span>
-              <span class="skill-item__meta">#Full Stack #Server API #RDBMS #Javascript</span>
-              <i class="fas fa-chevron-down" aria-hidden="true"></i>
-            </button>
-            <div class="skill-item__content">
-              <ul class="content-list">
-                <li>Laravel 8 버전으로 상세페이지 웹 에디터와 백오피스의 API와 화면을 개발했습니다.</li>
-                <li>폴더 관리 기능 추가 과정에서 업로드 이미지와 폴더 간 다대다 관계를 고려한 데이터 모델을 설계하고 이미지와 폴더 매핑을 처리하는 API를 개발했습니다.</li>
-                <li>MVC 구조를 바탕으로 인증, 데이터 모델링, 화면을 구성할 수 있습니다.</li>
-                <li>Swagger UI를 활용해 API 명세를 관리했습니다.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="skill-item">
-            <button class="skill-item__header" type="button" aria-expanded="false">
-              <span class="skill-item__title">Vue.js</span>
-              <span class="skill-item__meta">#Frontend #Hybrid App #Socket.io</span>
-              <i class="fas fa-chevron-down" aria-hidden="true"></i>
-            </button>
-            <div class="skill-item__content">
-              <ul class="content-list">
-                <li>Vue.js 2 버전으로 적립&매장 쿠폰 마케팅 서비스의 고객용 안드로이드 하이브리드 앱을 개발했습니다.</li>
-                <li>도장/포인트 적립, 쿠폰함, 선물구매함의 API를 연동하고 사용자 화면을 구현했습니다.</li>
-                <li>QR 코드 스캔과 Socket 통신을 활용하여 고객의 쿠폰 및 선물을 POS에서 실시간으로 사용할 수 있는 기능을 구현했습니다.</li>
-                <li>KCP 결제 API를 연동하여 결제 프로세스를 구현했습니다.</li>
-              </ul>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -407,6 +316,97 @@
         </article>
       </div>
      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>SKILLS</h1>
+        <div class="skills__list">
+          <article class="skill-item open">
+            <button class="skill-item__header" type="button" aria-expanded="true">
+              <span class="skill-item__title">React</span>
+              <span class="skill-item__meta">#Frontend #Redux #MUI</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <ul class="content-list">
+                <li>React 18 버전으로 쇼핑몰 통합관리 서비스를 개발했습니다.</li>
+                <li>Redux를 활용해 페이지별 상태를 관리하고 React Hook으로 팝업, 툴팁 등 공통 UI 기능의 상태와 동작 로직을 구현했습니다.</li>
+                <li>마켓 정책을 Configuration 객체로 분리하고 컴포넌트는 설정에 따라 렌더링만 수행하도록 설계했습니다.</li>
+                <li>AG-Grid를 활용해 대량의 상품/주문 데이터를 정렬, 필터링, 컬럼 관리 기능을 제공하는 공통 리스트 컴포넌트를 구현했습니다.</li>
+                <li>Atomic Design과 Storybook을 적용해 공통 컴포넌트를 관리했습니다.</li>
+                <li>ESLint, Prettier를 적용해 팀 내 코딩 컨벤션을 수립하고 코드 품질을 관리했습니다.</li>
+                <li>백오피스에서는 디자인 리소스 없이 일관된 UI를 빠르게 구현하기 위해 MUI를 활용했습니다.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">Node.js</span>
+              <span class="skill-item__meta">#Backend #Server API #express #puppeteer #ExcelJS</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <ul class="content-list">
+                <li>Node.js와 Express 기반으로 쇼핑몰 통합관리 서비스의 마켓 정책 변경에 따른 기능 개선 및 유지보수를 담당했습니다.</li>
+                <li>신규 판매 채널의 Open API 분석해 상품, 주문, 배송 데이터를 시스템과 연동하여 내부 서비스 구조에 맞게 표준화하는 API를 구현했습니다.</li>
+                <li>MSA 환경에서 셀러 인증, 상품, 주문, 배송 처리를 위한 REST API를 설계하고 YAML 워크플로우를 통해 마켓별 연동 규칙을 구현했습니다.</li>
+                <li>Open API에서 제공하지 않는 데이터는 웹 스크래핑(puppeteer) 수집으로 일관된 데이터 처리를 했습니다.</li>
+                <li>Swagger UI를 활용해 API 명세를 관리했습니다.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">Next.js</span>
+              <span class="skill-item__meta">#Full Stack #React #Redux #ExcelJS #express</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <ul class="content-list">
+                <li>Next.js 13 버전으로 쇼핑몰 통합관리 서비스의 백오피스를 개발했습니다.</li>
+                <li>반복적으로 사용되는 CRUD 화면은 공통 목록, 상세 컴포넌트로 표준화했습니다.</li>
+                <li>인증 사용자 정보 등의 전역 상태는 Redux로 관리했습니다.</li>
+                <li>CRUD 중심의 화면 특성을 고려해 SWR Hook의 서버 데이터 조회 및 캐싱 기능으로 상태 관리 부담을 줄였습니다.</li>
+                <li>RBAC 방법으로 팀 별로 메뉴의 접근 권한을 관리했습니다.</li>
+                <li>마켓 기초 데이터를 엑셀로 일괄 업로드할 수 있는 기능을 구현했습니다.</li>
+                <li>등록, 수정 등 주요 액션에 대한 로그를 기록 및 조회 기능을 구현하여 데이터 변경 이력을 추적할 수 있도록 했습니다.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">PHP Laravel</span>
+              <span class="skill-item__meta">#Full Stack #Server API #RDBMS #Javascript</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <ul class="content-list">
+                <li>Laravel 8 버전으로 상세페이지 웹 에디터와 백오피스의 API와 화면을 개발했습니다.</li>
+                <li>폴더 관리 기능 추가 과정에서 업로드 이미지와 폴더 간 다대다 관계를 고려한 데이터 모델을 설계하고 이미지와 폴더 매핑을 처리하는 API를 개발했습니다.</li>
+                <li>MVC 구조를 바탕으로 인증, 데이터 모델링, 화면을 구성할 수 있습니다.</li>
+                <li>Swagger UI를 활용해 API 명세를 관리했습니다.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="skill-item">
+            <button class="skill-item__header" type="button" aria-expanded="false">
+              <span class="skill-item__title">Vue.js</span>
+              <span class="skill-item__meta">#Frontend #Hybrid App #Socket.io</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="skill-item__content">
+              <ul class="content-list">
+                <li>Vue.js 2 버전으로 적립&매장 쿠폰 마케팅 서비스의 고객용 안드로이드 하이브리드 앱을 개발했습니다.</li>
+                <li>도장/포인트 적립, 쿠폰함, 선물구매함의 API를 연동하고 사용자 화면을 구현했습니다.</li>
+                <li>QR 코드 스캔과 Socket 통신을 활용하여 고객의 쿠폰 및 선물을 POS에서 실시간으로 사용할 수 있는 기능을 구현했습니다.</li>
+                <li>KCP 결제 API를 연동하여 결제 프로세스를 구현했습니다.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <div class="image-modal" aria-hidden="true">
