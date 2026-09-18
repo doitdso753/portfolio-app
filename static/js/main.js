@@ -32,7 +32,7 @@ navbarToggleBtn.addEventListener('click', () => {
 });
 
 // Handle navigation from the home action links
-document.querySelectorAll('.home__button').forEach((link) => {
+document.querySelectorAll('.home__button[href^="#"]').forEach((link) => {
   link.addEventListener('click', (event) => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
