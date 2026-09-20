@@ -2,6 +2,16 @@
 
 const common = window.PortfolioCommon;
 
+// Let detail tabs check whether the project list is still open.
+if ('BroadcastChannel' in window) {
+  const homeChannel = new BroadcastChannel('portfolio-home');
+  homeChannel.addEventListener('message', (event) => {
+    if (event.data?.type === 'find-home') {
+      homeChannel.postMessage({ type: 'home-open', requestId: event.data.requestId });
+    }
+  });
+}
+
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
