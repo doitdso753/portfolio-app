@@ -70,7 +70,20 @@
           </section>
           <section class="case-section" id="technology" aria-labelledby="technology-title">
             <h2 id="technology-title">기술 구성</h2>
-            <h3>기술 스택</h3>
+            <h3 class="case-architecture-title">시스템 구성도</h3>
+            <figure class="case-architecture">
+              <button class="detail-item__gallery" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/hiselling/hiselling-system-architecture.svg" data-image-modal-alt="쇼핑몰통합관리 시스템 구성도" aria-label="쇼핑몰통합관리 시스템 구성도 크게 보기">
+                <img src="../static/imgs/projects/hiselling/hiselling-system-architecture.svg" alt="쇼핑몰통합관리 시스템 구성도">
+              </button>
+            </figure>
+            <ul class="case-architecture-list">
+              <li>UI Service(React)와 Backend/Core Service(Node.js)로 구성된 쇼핑몰 통합관리 서비스입니다.</li>
+              <li>사용자는 UI Service를 통해 상품, 주문, 배송 관리 기능을 이용하며, UI Bridge가 Backend Service와 연동하여 비즈니스 기능을 제공합니다.</li>
+              <li>Backend Service는 도메인별 API로 구성해 기능별 책임을 분리하고 Kafka 메시지 큐로 Backend Service 작업을 비동기로 처리합니다.</li>
+              <li>Next.js 기반 Admin Service에서 마켓 기초 데이터 등 운영 기능을 관리할 수 있도록 구현했습니다.</li>
+              <li>Docker/Kubernetes 컨테이너 환경에서 서비스를 운영했습니다.</li>
+            </ul>
+            <h3 class="case-stack-title">기술 스택</h3>
             <table class="case-stack">
               <caption class="sr-only">분류별 사용 기술</caption>
               <colgroup><col class="case-stack__category"><col></colgroup>
@@ -93,19 +106,6 @@
                 </tr>
               </tbody>
             </table>
-            <h3 class="case-architecture-title">시스템 구성도</h3>
-            <ul class="case-architecture-list">
-              <li>UI Service(React)와 Backend/Core Service(Node.js)로 구성된 쇼핑몰 통합관리 서비스입니다.</li>
-              <li>사용자는 UI Service를 통해 상품, 주문, 배송 관리 기능을 이용하며, UI Bridge가 Backend Service와 연동하여 비즈니스 기능을 제공합니다.</li>
-              <li>Backend Service는 도메인별 API로 구성해 기능별 책임을 분리하고 Kafka 메시지 큐로 Backend Service 작업을 비동기로 처리합니다.</li>
-              <li>Next.js 기반 Admin Service에서 마켓 기초 데이터 등 운영 기능을 관리할 수 있도록 구현했습니다.</li>
-              <li>Docker/Kubernetes 컨테이너 환경에서 서비스를 운영했습니다.</li>
-            </ul>
-            <figure class="case-architecture">
-              <button class="detail-item__gallery" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/hiselling/hiselling-system-architecture.svg" data-image-modal-alt="쇼핑몰통합관리 시스템 구성도" aria-label="쇼핑몰통합관리 시스템 구성도 크게 보기">
-                <img src="../static/imgs/projects/hiselling/hiselling-system-architecture.svg" alt="쇼핑몰통합관리 시스템 구성도">
-              </button>
-            </figure>
           </section>
           <section class="case-section" id="screens" aria-labelledby="screens-title">
             <h2 id="screens-title">서비스 화면</h2>

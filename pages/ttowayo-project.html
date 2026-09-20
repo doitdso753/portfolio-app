@@ -72,7 +72,19 @@
           </section>
           <section class="case-section" id="technology" aria-labelledby="technology-title">
             <h2 id="technology-title">기술 구성</h2>
-            <h3>기술 스택</h3>
+            <h3 class="case-architecture-title">시스템 구성도</h3>
+            <figure class="case-architecture">
+              <button class="detail-item__gallery" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" data-image-modal-alt="또와요 시스템 구성도" aria-label="또와요 시스템 구성도 크게 보기">
+                <img src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" alt="또와요 시스템 구성도">
+              </button>
+            </figure>
+            <ul class="case-architecture-list">
+              <li>고객용 모바일 앱, 매장 POS 앱, 관리자 사이트로 구성된 적립&amp;매장 마케팅 서비스입니다.</li>
+              <li>모바일 앱과 POS 앱은 Service API를 통해 회원, 적립, 쿠폰, 선물 데이터를 처리하도록 설계했으며, 결제 기능은 별도 Pay API로 분리해 PG사 연동했습니다.</li>
+              <li>관리자 사이트는 Laravel 기반으로 구축하여 매장, 쿠폰, 이벤트, 회원 정보를 통합 관리할 수 있도록 구현했습니다.</li>
+              <li>서비스 데이터는 MySQL에 저장하고 이미지 및 첨부 파일은 Object Storage에 분리 저장했습니다.</li>
+            </ul>
+            <h3 class="case-stack-title">기술 스택</h3>
             <table class="case-stack">
               <caption class="sr-only">분류별 사용 기술</caption>
               <colgroup><col class="case-stack__category"><col></colgroup>
@@ -95,18 +107,6 @@
                 </tr>
               </tbody>
             </table>
-            <h3 class="case-architecture-title">시스템 구성도</h3>
-            <ul class="case-architecture-list">
-              <li>고객용 모바일 앱, 매장 POS 앱, 관리자 사이트로 구성된 적립&amp;매장 마케팅 서비스입니다.</li>
-              <li>모바일 앱과 POS 앱은 Service API를 통해 회원, 적립, 쿠폰, 선물 데이터를 처리하도록 설계했으며, 결제 기능은 별도 Pay API로 분리해 PG사 연동했습니다.</li>
-              <li>관리자 사이트는 Laravel 기반으로 구축하여 매장, 쿠폰, 이벤트, 회원 정보를 통합 관리할 수 있도록 구현했습니다.</li>
-              <li>서비스 데이터는 MySQL에 저장하고 이미지 및 첨부 파일은 Object Storage에 분리 저장했습니다.</li>
-            </ul>
-            <figure class="case-architecture">
-              <button class="detail-item__gallery" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" data-image-modal-alt="또와요 시스템 구성도" aria-label="또와요 시스템 구성도 크게 보기">
-                <img src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" alt="또와요 시스템 구성도">
-              </button>
-            </figure>
           </section>
           <section class="case-section" id="screens" aria-labelledby="screens-title">
             <h2 id="screens-title">서비스 화면</h2>

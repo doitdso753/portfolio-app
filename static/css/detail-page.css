@@ -425,11 +425,16 @@
    13. 아키텍처 이미지
    ========================================================================== */
 .case-section .case-architecture-title {
-  margin-top: 32px;
+  margin-top: 0;
 }
 
 .case-architecture {
-  margin-top: 24px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.case-stack-title {
+  margin-top: 40px !important;
 }
 
 .case-page .case-architecture button {
