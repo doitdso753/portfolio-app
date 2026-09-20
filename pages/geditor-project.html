@@ -1,147 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>박소현 포트폴리오 - 웹 에디터 서비스</title>
-    <meta
-      name="description"
-      content="박소현 포트폴리오 - 웹 에디터 서비스"
-    />
-<!--    <meta name="author" content="Ellie" />-->
-    <link rel="icon" type="image/png" href="../static/imgs/favicon.png" />
-    <script
-      src="https://kit.fontawesome.com/9eb162ac0d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../static/css/style.css" />
+    <meta name="description" content="박소현 포트폴리오 - 웹 에디터 서비스">
+    <!--    <meta name="author" content="Ellie" />-->
+    <link rel="icon" type="image/png" href="../static/imgs/favicon.png">
+    <script src="https://kit.fontawesome.com/9eb162ac0d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/detail-page.css">
     <script src="../static/js/common.js" defer></script>
     <script src="../static/js/image-modal.js" defer></script>
     <script src="../static/js/detail.js" defer></script>
   </head>
-  <body>
-    <section id="detail-panel" class="section">
-      <div class="section__container detail-panel">
+  <body class="case-page">
+    <main id="detail-panel" class="case-main">
+      <header class="case-header">
+        <a class="case-back" href="/">← 프로젝트 목록</a>
+        <p class="case-eyebrow">PROJECT CASE STUDY</p>
         <h1>웹 에디터 서비스</h1>
-
-        <div class="detail-list">
-          <article class="detail-note" data-detail-item>
-            <p class="detail-item__label">담당업무</p>
+        <p class="case-intro">
+          상품명을 입력하면 AI가 상품상세페이지를 자동 생성하는 웹 에디터입니다. <br>
+          AI가 생성한 콘텐츠를 사용자가 쉽게 수정할 수 있도록 편집 기능과 사용자 경험(UX) 개선에 집중했습니다.
+        </p>
+      </header>
+      <div class="case-layout">
+        <nav class="case-nav" aria-label="프로젝트 상세 목차">
+          <div class="case-nav__header">
+            <p class="case-nav__title">목차</p>
+            <a class="case-nav__home" href="/"><i class="fab fa-diaspora" aria-hidden="true"></i><span>박소현 포트폴리오</span></a>
+            <button class="case-nav__toggle" type="button" aria-expanded="false" aria-controls="case-nav-list" aria-label="목차 열기">
+              <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+          </div>
+          <ol class="case-nav__list" id="case-nav-list">
+            <li><a href="#outcomes"><span>핵심 기여·성과</span></a></li>
+            <li><a href="#responsibilities"><span>담당 업무</span></a></li>
+            <li><a href="#technology"><span>기술 구성</span></a></li>
+            <li><a href="#screens"><span>서비스 화면</span></a></li>
+          </ol>
+        </nav>
+        <div class="case-content">
+          <section class="case-section" id="outcomes" aria-labelledby="outcomes-title">
+            <h2 id="outcomes-title">핵심 기여·성과</h2>
+            <div class="case-outcomes">
+              <article class="case-outcome">
+                <p class="case-outcome__label">API 처리 속도</p>
+                <h3>약 40% 향상</h3>
+                <p>글로벌 미들웨어 구조 개선</p>
+              </article>
+              <article class="case-outcome">
+                <p class="case-outcome__label">이미지 품질 관련 고객 문의</p>
+                <h3>약 66% 감소</h3>
+                <p>Playwright 기반 이미지 추출 서버 구축</p>
+              </article>
+              <article class="case-outcome">
+                <p class="case-outcome__label">데이터 유실 관련 고객 문의</p>
+                <h3>약 90% 감소</h3>
+                <p>자동저장 기능 추가</p>
+              </article>
+            </div>
+          </section>
+          <section class="case-section" id="responsibilities" aria-labelledby="responsibilities-title">
+            <h2 id="responsibilities-title">담당 업무</h2>
             <ul class="content-list">
               <li>Laravel API 설계 및 개발</li>
               <li>Python 이미지 캡쳐 및 썸네일 생성 서버 구축 및 기능 개발</li>
               <li>관리자 사이트 기능 개발</li>
               <li>기능 추가에 따른 DB 스키마 설계</li>
             </ul>
-          </article>
-
-          <article class="detail-note" data-detail-item>
-            <p class="detail-item__label">기술스택</p>
-            <ul class="content-list">
-              <li>Frontend: JavaScript, jQuery</li>
-              <li>Backend: PHP Laravel, Python, FastAPI, Playwright</li>
-              <li>Database: MariaDB</li>
-              <li>Tools/Infra: Docker, Linux, Git, GitLab, Confluence, Slack, VSCode</li>
+          </section>
+          <section class="case-section" id="technology" aria-labelledby="technology-title">
+            <h2 id="technology-title">기술 구성</h2>
+            <h3>기술 스택</h3>
+            <table class="case-stack">
+              <caption class="sr-only">분류별 사용 기술</caption>
+              <colgroup><col class="case-stack__category"><col></colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">Frontend</th>
+                  <td><ul class="case-stack__items"><li>JavaScript</li><li>jQuery</li></ul></td>
+                </tr>
+                <tr>
+                  <th scope="row">Backend</th>
+                  <td><ul class="case-stack__items"><li>PHP Laravel</li><li>Python</li><li>FastAPI</li><li>Playwright</li></ul></td>
+                </tr>
+                <tr>
+                  <th scope="row">Database</th>
+                  <td><ul class="case-stack__items"><li>MariaDB</li></ul></td>
+                </tr>
+                <tr>
+                  <th scope="row">Tools/Infra</th>
+                  <td><ul class="case-stack__items"><li>Docker</li><li>Linux</li><li>Git</li><li>GitLab</li><li>Confluence</li><li>Slack</li><li>VSCode</li></ul></td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="case-architecture-title">시스템 구성도</h3>
+            <ul class="case-architecture-list">
+              <li>Laravel 기반 API 서버로 구성된 웹 에디터 서비스의 개발 및 운영을 담당했습니다.</li>
+              <li>Service API가 이미지 처리 및 비즈니스 로직을 담당하도록 구현했습니다.</li>
+              <li>Python 기반 Capture API와 Image Thumbnail API를 구축해 이미지 캡처, 썸네일 생성 등 전처리 기능을 제공했으며, AI API 연동을 통해 상품 특성에 맞는 상세페이지 문구 자동 생성 기능을 개발했습니다.</li>
+              <li>관리자 사이트는 Laravel 기반으로 콘텐츠 관리 기능을 개발했습니다.</li>
             </ul>
-          </article>
-
-          <article class="detail-item detail-item--reverse" data-detail-item>
-            <div class="detail-item__content">
-              <p class="detail-item__label">주요 경험</p>
-              <p>
-                고객 피드백과 운영 과정에서 발생한 문제를 분석하고 기능 개선을 수행했습니다.
-                API 요청-응답 속도 저하 원인을 분석해 글로벌 미들웨어 구조를 개선한 결과 API 처리 속도를 약 40% 향상시켰고
-                이미지 품질 문제는 Playwright 기반 이미지 추출 서버를 구축해 관련 고객 문의를 약 66% 감소시켰습니다.
-                자동저장 기능을 추가해 데이터 유실 관련 고객 문의를 약 90% 감소시켰습니다.
-              </p>
-              <a class="detail-item__text-link" href="https://geditor.gabia.com/" target="_blank" rel="noopener noreferrer">
-                <span>서비스 구경하기</span>
-                <i class="fas fa-external-link-alt" aria-hidden="true"></i>
-              </a>
+            <figure class="case-architecture">
+              <button class="detail-item__gallery" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/geditor/geditor-system-architecture.svg" data-image-modal-alt="제디터 시스템 구성도" aria-label="제디터 시스템 구성도 크게 보기">
+                <img src="../static/imgs/projects/geditor/geditor-system-architecture.svg" alt="제디터 시스템 구성도">
+              </button>
+            </figure>
+          </section>
+          <section class="case-section" id="screens" aria-labelledby="screens-title">
+            <div class="case-section-heading">
+              <h2 id="screens-title">서비스 화면</h2>
+              <a class="case-service-link" href="https://geditor.gabia.com/" target="_blank" rel="noopener noreferrer">서비스 구경하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭에서 열림)</span></a>
             </div>
-            <div class="detail-gallery" aria-label="관리자 페이지 화면 모음">
-              <button
-                class="detail-item__gallery-item"
-                type="button"
-                data-image-modal-trigger
-                data-image-modal-src="../static/imgs/projects/geditor/geditor-service-image.png"
-                data-image-modal-alt="에디터 편집 화면"
-                aria-label="에디터 편집 화면 크게 보기"
-              >
-                <img src="../static/imgs/projects/geditor/geditor-service-image.png" alt="에디터 편집 화면" />
-              </button>
-              <button
-                class="detail-item__gallery-item"
-                type="button"
-                data-image-modal-trigger
-                data-image-modal-src="../static/imgs/projects/geditor/geditor-site-01.jpg"
-                data-image-modal-alt="PC다운로드 화면"
-                aria-label="PC다운로드 화면 크게 보기"
-              >
-                <img src="../static/imgs/projects/geditor/geditor-site-01.jpg" alt="PC다운로드 화면" />
-              </button>
-              <button
-                class="detail-item__gallery-item"
-                type="button"
-                data-image-modal-trigger
-                data-image-modal-src="../static/imgs/projects/geditor/geditor-site-02.jpg"
-                data-image-modal-alt="발행 화면"
-                aria-label="발행 화면 크게 보기"
-              >
-                <img src="../static/imgs/projects/geditor/geditor-site-02.jpg" alt="발행 화면" />
-              </button>
-              <button
-                class="detail-item__gallery-item"
-                type="button"
-                data-image-modal-trigger
-                data-image-modal-src="../static/imgs/projects/geditor/geditor-site-03.jpg"
-                data-image-modal-alt="폴더 관리 화면"
-                aria-label="폴더 관리 화면 크게 보기"
-              >
-                <img src="../static/imgs/projects/geditor/geditor-site-03.jpg" alt="폴더 관리 화면" />
-              </button>
-            </div>
-          </article>
-
-          <article class="detail-item" data-detail-item>
-            <div class="detail-item__content">
-              <p class="detail-item__label">시스템 구성도</p>
-              <p>
-                Laravel 기반 API 서버로 구성된 웹 에디터 서비스의 개발 및 운영을 담당했습니다.
-                Service API가 이미지 처리 및 비즈니스 로직을 담당하도록 구현했습니다.
-                Python 기반 Capture API와 Image Thumbnail API를 구축해 이미지 캡처, 썸네일 생성 등 전처리 기능을 제공했으며,
-                AI API 연동을 통해 상품 특성에 맞는 상세페이지 문구 자동 생성 기능을 개발했습니다.
-                관리자 사이트는 Laravel 기반으로 콘텐츠 관리 기능을 개발했습니다.
-              </p>
-            </div>
-            <button
-                    class="detail-item__gallery"
-                    type="button"
-                    data-image-modal-trigger
-                    data-image-modal-src="../static/imgs/projects/geditor/geditor-system-architecture.svg"
-                    data-image-modal-alt="제디터 시스템 구성도"
-                    aria-label="제디터 시스템 구성도 크게 보기"
-            >
-              <img src="../static/imgs/projects/geditor/geditor-system-architecture.svg" alt="제디터 시스템 구성도" />
-            </button>
-          </article>
+            <article class="case-screen-group">
+              <h3>에디터 편집과 콘텐츠 관리 화면</h3>
+              <p>편집, PC 다운로드, 발행, 폴더 관리 화면입니다.</p>
+              <div class="case-gallery">
+                <figure>
+                  <button class="detail-item__gallery-item" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/geditor/geditor-service-image.png" data-image-modal-alt="에디터 편집 화면" aria-label="에디터 편집 화면 크게 보기">
+                    <img loading="lazy" decoding="async" src="../static/imgs/projects/geditor/geditor-service-image.png" alt="에디터 편집 화면">
+                  </button>
+                  <figcaption>에디터 편집 화면</figcaption>
+                </figure>
+                <figure>
+                  <button class="detail-item__gallery-item" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/geditor/geditor-site-01.jpg" data-image-modal-alt="PC다운로드 화면" aria-label="PC다운로드 화면 크게 보기">
+                    <img loading="lazy" decoding="async" src="../static/imgs/projects/geditor/geditor-site-01.jpg" alt="PC다운로드 화면">
+                  </button>
+                  <figcaption>PC다운로드 화면</figcaption>
+                </figure>
+                <figure>
+                  <button class="detail-item__gallery-item" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/geditor/geditor-site-02.jpg" data-image-modal-alt="발행 화면" aria-label="발행 화면 크게 보기">
+                    <img loading="lazy" decoding="async" src="../static/imgs/projects/geditor/geditor-site-02.jpg" alt="발행 화면">
+                  </button>
+                  <figcaption>발행 화면</figcaption>
+                </figure>
+                <figure>
+                  <button class="detail-item__gallery-item" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/geditor/geditor-site-03.jpg" data-image-modal-alt="폴더 관리 화면" aria-label="폴더 관리 화면 크게 보기">
+                    <img loading="lazy" decoding="async" src="../static/imgs/projects/geditor/geditor-site-03.jpg" alt="폴더 관리 화면">
+                  </button>
+                  <figcaption>폴더 관리 화면</figcaption>
+                </figure>
+              </div>
+            </article>
+          </section>
+          <footer class="case-footer">
+            <a class="case-back" href="/">← 프로젝트 목록으로 돌아가기</a>
+          </footer>
         </div>
       </div>
-    </section>
-
+    </main>
     <div class="image-modal" aria-hidden="true">
       <button class="image-modal__close" type="button" aria-label="이미지 크게 보기 닫기">
         <i class="fas fa-times"></i>
       </button>
-      <img class="image-modal__img" src="" alt="" />
+      <img class="image-modal__img" src="" alt="">
     </div>
-
     <!-- Arrow up -->
-    <button class="arrow-up">
+    <button class="arrow-up" type="button" aria-label="페이지 맨 위로 이동">
       <i class="fas fa-arrow-up"></i>
     </button>
   </body>
