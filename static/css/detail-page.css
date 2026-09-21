@@ -226,8 +226,12 @@
    ========================================================================== */
 .case-outcomes {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+}
+
+.case-outcomes:has(.case-outcome:nth-child(3):last-child) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .case-outcome {
@@ -592,6 +596,7 @@
   }
 
   .case-outcomes,
+  .case-outcomes:has(.case-outcome:nth-child(3):last-child),
   .case-gallery {
     grid-template-columns: minmax(0, 1fr);
     gap: 16px;
