@@ -471,58 +471,78 @@ p {
 
 .work__projects {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   width: 100%;
   margin-top: 40px;
 }
 
 .project-panel {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
-  gap: 32px;
-  align-items: stretch;
+  min-width: 0;
   background-color: var(--color-white);
   border: 1px solid var(--color-light-white);
   border-radius: var(--size-border-radius);
-  padding: 32px;
   text-align: left;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow var(--animation-duration) ease;
+}
+
+.project-panel:hover,
+.project-panel:focus-within {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.project-panel__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--color-dark-grey);
+  border-radius: var(--size-border-radius);
+  overflow: hidden;
+}
+
+.project-panel__link:focus-visible {
+  outline: 3px solid var(--color-dark-grey);
+  outline-offset: 4px;
 }
 
 .project-panel__media {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  flex: 0 0 auto;
   width: 100%;
-  min-height: 320px;
-  padding: 24px;
-  background-color: var(--color-light-white);
-  border: 1px solid var(--color-dark-white);
-  border-radius: var(--size-border-radius);
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  padding: 8px;
   overflow: hidden;
-  transition: transform var(--animation-duration) ease;
-}
-
-.project-panel__media:hover {
-  transform: translateY(-4px);
+  background-color: var(--color-light-white);
+  border-bottom: 1px solid var(--color-light-white);
 }
 
 .project-panel__img {
-  max-width: 100%;
-  max-height: 300px;
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: inherit;
   object-fit: contain;
 }
 
 .project-panel__content {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  justify-content: center;
+  min-width: 0;
+  padding: 24px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .project-panel__title {
   color: var(--color-dark-grey);
-  margin-bottom: 16px;
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.4;
 }
 
 .project-panel__description,
@@ -532,44 +552,31 @@ p {
   line-height: 1.8;
 }
 
-.project-panel__meta {
-  display: grid;
-  gap: 10px;
-  margin: 20px 0 28px;
-  padding: 16px 0;
-  border-top: 1px solid var(--color-light-white);
-  border-bottom: 1px solid var(--color-light-white);
-}
-
-.project-panel__meta__item {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  gap: 16px;
-  align-items: center;
-}
-
-.project-panel__meta dt,
-.project-panel__meta dd {
+.project-panel__description {
   margin: 0;
+}
+
+.project-panel__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.project-panel__tag {
+  padding: 4px 10px;
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-light-white);
+  color: var(--color-dark-grey);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.project-panel__period {
+  margin: auto 0 0;
   font-size: var(--font-small);
   line-height: 1.6;
-}
-
-.project-panel__meta dt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 34px;
-  height: 34px;
-  color: var(--color-light-grey);
-  background-color: var(--color-light-white);
-  border-radius: 50%;
-  font-weight: var(--weight-semi-bold);
-}
-
-.project-panel__meta dd {
-  color: var(--color-dark-grey);
-  font-weight: var(--weight-semi-bold);
 }
 
 .content-list {
@@ -579,36 +586,6 @@ p {
 
 .content-list li {
   list-style: disc;
-}
-
-.project-panel__link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
-  align-self: flex-start;
-  min-width: 160px;
-  color: var(--color-white);
-  background-color: var(--color-pink);
-  border: 1px solid var(--color-pink);
-  border-radius: var(--size-border-radius);
-  font-size: var(--font-small);
-  font-weight: var(--weight-semi-bold);
-  padding: 10px 18px;
-  box-shadow: 0 4px 10px rgba(254, 145, 141, 0.2);
-  transition:
-    background-color var(--animation-duration) ease,
-    border-color var(--animation-duration) ease,
-    box-shadow var(--animation-duration) ease,
-    transform var(--animation-duration) ease;
-}
-
-.project-panel__link:hover {
-  color: var(--color-white);
-  background-color: var(--color-dark-pink);
-  border-color: var(--color-dark-pink);
-  box-shadow: 0 6px 12px rgba(255, 104, 99, 0.24);
-  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -1091,66 +1068,21 @@ button.contact__link {
     margin-top: 28px;
   }
 
-  .project-panel {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
-    padding: 20px;
-  }
-
   .project-panel__media {
-    min-height: 220px;
-    padding: 16px;
-  }
-
-  .project-panel__img {
-    max-height: 220px;
+    padding: 8px;
   }
 
   .project-panel__content {
-    min-width: 0;
+    padding: 20px;
   }
 
   .project-panel__title {
-    margin: 0 0 12px;
     font-size: 22px;
-    line-height: 1.4;
-    word-break: keep-all;
-    overflow-wrap: anywhere;
   }
 
-  .project-panel__description {
-    margin: 0;
+  .project-panel__description,
+  .project-panel__period {
     font-size: 16px;
-    line-height: 1.7;
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-  }
-
-  .project-panel__meta {
-    gap: 16px;
-    margin: 24px 0;
-    padding: 20px 0;
-  }
-
-  .project-panel__meta__item {
-    grid-template-columns: 34px minmax(0, 1fr);
-    gap: 12px;
-    align-items: start;
-  }
-
-  .project-panel__meta dd {
-    padding-top: 3px;
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-wrap: anywhere;
-  }
-
-  .project-panel__link {
-    width: 100%;
-    min-width: 0;
-    min-height: 48px;
-    font-size: 16px;
-    padding: 12px 16px;
   }
 
   /* 이미지 확대 모달 */
@@ -1230,5 +1162,12 @@ button.contact__link {
     line-height: 50px;
     right: 16px;
     bottom: 16px;
+  }
+}
+
+/* 프로젝트 카드는 태블릿에서도 3열을 유지하고 모바일에서만 1열로 전환 */
+@media screen and (max-width: 599px) {
+  .work__projects {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

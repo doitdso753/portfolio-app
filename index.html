@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="static/css/style.css" />
     <script src="static/js/common.js" defer></script>
     <script src="static/js/main.js" defer></script>
-    <script src="static/js/image-modal.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -132,172 +131,56 @@
       <h1>PROJECTS</h1>
       <div class="work__projects">
         <article class="project-panel">
-          <button
-            class="project-panel__media"
-            type="button"
-            data-image-modal-trigger
-            data-image-modal-src="static/imgs/projects/geditor/geditor-service-image.png"
-            data-image-modal-alt="웹 에디터 서비스"
-            aria-label="웹 에디터 서비스 크게 보기"
-          >
-            <img
-              class="project-panel__img"
-              src="static/imgs/projects/geditor/geditor-service-image.png"
-              alt="웹 에디터 서비스"
-            />
-          </button>
-          <div class="project-panel__content">
-            <h2 class="project-panel__title">웹 에디터 서비스</h2>
-            <p class="project-panel__description">
-              AI 기반 상품 상세페이지 제작, 편집 서비스
-            </p>
-            <dl class="project-panel__meta">
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  <span class="sr-only">진행 기간</span>
-                </dt>
-                <dd>2024.05 ~ 2025.11</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-user-friends" aria-hidden="true"></i>
-                  <span class="sr-only">개발 인원</span>
-                </dt>
-                <dd>개발 인원 5명</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-code" aria-hidden="true"></i>
-                  <span class="sr-only">기술 스택</span>
-                </dt>
-                <dd>PHP Laravel, Javascript, Python</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-users" aria-hidden="true"></i>
-                  <span class="sr-only">협업 툴</span>
-                </dt>
-                <dd>Gitlab, Confluence, Slack</dd>
-              </div>
-            </dl>
-            <a class="project-panel__link" href="./pages/geditor-project.html" target="_blank" rel="noopener noreferrer">
-              <span>자세히보기</span>
-              <span aria-hidden="true">&gt;</span>
-            </a>
-          </div>
+          <a class="project-panel__link" href="./pages/geditor-project.html" target="_blank" rel="noopener noreferrer" aria-label="웹 에디터 서비스 상세 보기 (새 탭)">
+            <div class="project-panel__media">
+              <img class="project-panel__img" src="static/imgs/projects/geditor/geditor-service-image.png" alt="웹 에디터 서비스" />
+            </div>
+            <div class="project-panel__content">
+              <h2 class="project-panel__title">웹 에디터 서비스</h2>
+              <p class="project-panel__description">AI 기반 상품 상세페이지 제작, 편집 서비스</p>
+              <ul class="project-panel__tags" aria-label="기술 스택">
+                <li class="project-panel__tag">PHP Laravel</li>
+                <li class="project-panel__tag">Javascript</li>
+                <li class="project-panel__tag">Python</li>
+              </ul>
+              <p class="project-panel__period"><span class="sr-only">진행 기간: </span>2024.05 ~ 2025.11</p>
+            </div>
+          </a>
         </article>
         <article class="project-panel">
-          <button
-            class="project-panel__media"
-            type="button"
-            data-image-modal-trigger
-            data-image-modal-src="static/imgs/projects/hiselling/hiselling-service-image.png"
-            data-image-modal-alt="쇼핑몰통합관리 서비스"
-            aria-label="쇼핑몰통합관리 서비스 크게 보기"
-          >
-            <img
-              class="project-panel__img"
-              src="static/imgs/projects/hiselling/hiselling-service-image.png"
-              alt="쇼핑몰통합관리 서비스"
-            />
-          </button>
-          <div class="project-panel__content">
-            <h2 class="project-panel__title">쇼핑몰통합관리 서비스</h2>
-            <p class="project-panel__description">
-              여러 판매 채널의 상품, 주문, 배송을 통합 관리하는 서비스
-            </p>
-            <dl class="project-panel__meta">
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  <span class="sr-only">진행 기간</span>
-                </dt>
-                <dd>2022.06 ~ 2023.12</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-user-friends" aria-hidden="true"></i>
-                  <span class="sr-only">개발 인원</span>
-                </dt>
-                <dd>개발 인원 7명</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-code" aria-hidden="true"></i>
-                  <span class="sr-only">기술 스택</span>
-                </dt>
-                <dd>React, Redux, Node.js, Next.js</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-users" aria-hidden="true"></i>
-                  <span class="sr-only">협업 툴</span>
-                </dt>
-                <dd>Gitlab, Jira, Confluence</dd>
-              </div>
-            </dl>
-            <a class="project-panel__link" href="./pages/hiselling-project.html" target="_blank" rel="noopener noreferrer">
-              <span>자세히보기</span>
-              <span aria-hidden="true">&gt;</span>
-            </a>
-          </div>
+          <a class="project-panel__link" href="./pages/hiselling-project.html" target="_blank" rel="noopener noreferrer" aria-label="쇼핑몰통합관리 서비스 상세 보기 (새 탭)">
+            <div class="project-panel__media">
+              <img class="project-panel__img" src="static/imgs/projects/hiselling/hiselling-service-image.png" alt="쇼핑몰통합관리 서비스" />
+            </div>
+            <div class="project-panel__content">
+              <h2 class="project-panel__title">쇼핑몰통합관리 서비스</h2>
+              <p class="project-panel__description">여러 판매 채널의 상품, 주문, 배송을 통합 관리하는 서비스</p>
+              <ul class="project-panel__tags" aria-label="기술 스택">
+                <li class="project-panel__tag">React</li>
+                <li class="project-panel__tag">Redux</li>
+                <li class="project-panel__tag">Node.js</li>
+                <li class="project-panel__tag">Next.js</li>
+              </ul>
+              <p class="project-panel__period"><span class="sr-only">진행 기간: </span>2022.06 ~ 2023.12</p>
+            </div>
+          </a>
         </article>
         <article class="project-panel">
-          <button
-            class="project-panel__media"
-            type="button"
-            data-image-modal-trigger
-            data-image-modal-src="static/imgs/projects/ttowayo/ttowayo-service-image.png"
-            data-image-modal-alt="적립&매장 마케팅 서비스"
-            aria-label="적립&매장 마케팅 서비스 크게 보기"
-          >
-            <img
-              class="project-panel__img"
-              src="static/imgs/projects/ttowayo/ttowayo-service-image.png"
-              alt="적립&매장 마케팅 서비스"
-            />
-          </button>
-          <div class="project-panel__content">
-            <h2 class="project-panel__title">적립&매장 마케팅 서비스</h2>
-            <p class="project-panel__description">
-              매장의 고객 관리와 재방문 마케팅을 지원하는 적립, 쿠폰 서비스
-            </p>
-            <dl class="project-panel__meta">
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                  <span class="sr-only">진행 기간</span>
-                </dt>
-                <dd>2017.08 ~ 2020.09</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-user-friends" aria-hidden="true"></i>
-                  <span class="sr-only">참여 팀 인원</span>
-                </dt>
-                <dd>개발 인원 2명</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-code" aria-hidden="true"></i>
-                  <span class="sr-only">기술 스택</span>
-                </dt>
-                <dd>Vue.js, Android, PHP Laravel</dd>
-              </div>
-              <div class="project-panel__meta__item">
-                <dt>
-                  <i class="fas fa-users" aria-hidden="true"></i>
-                  <span class="sr-only">협업 툴</span>
-                </dt>
-                <dd>Github, Notion</dd>
-              </div>
-            </dl>
-            <a class="project-panel__link" href="./pages/ttowayo-project.html" target="_blank" rel="noopener noreferrer">
-              <span>자세히보기</span>
-              <span aria-hidden="true">&gt;</span>
-            </a>
-          </div>
+          <a class="project-panel__link" href="./pages/ttowayo-project.html" target="_blank" rel="noopener noreferrer" aria-label="적립&매장 마케팅 서비스 상세 보기 (새 탭)">
+            <div class="project-panel__media">
+              <img class="project-panel__img" src="static/imgs/projects/ttowayo/ttowayo-service-image.png" alt="적립&매장 마케팅 서비스" />
+            </div>
+            <div class="project-panel__content">
+              <h2 class="project-panel__title">적립&매장 마케팅 서비스</h2>
+              <p class="project-panel__description">매장의 고객 관리와 재방문 마케팅을 지원하는 적립, 쿠폰 서비스</p>
+              <ul class="project-panel__tags" aria-label="기술 스택">
+                <li class="project-panel__tag">Vue.js</li>
+                <li class="project-panel__tag">Android</li>
+                <li class="project-panel__tag">PHP Laravel</li>
+              </ul>
+              <p class="project-panel__period"><span class="sr-only">진행 기간: </span>2017.08 ~ 2020.09</p>
+            </div>
+          </a>
         </article>
       </div>
      </div>
@@ -399,12 +282,6 @@
       </div>
     </section>
 
-    <div class="image-modal" aria-hidden="true">
-      <button class="image-modal__close" type="button" aria-label="이미지 크게 보기 닫기">
-        <i class="fas fa-times"></i>
-      </button>
-      <img class="image-modal__img" src="" alt="" />
-    </div>
 
     <!-- Arrow up -->
     <button class="arrow-up">
