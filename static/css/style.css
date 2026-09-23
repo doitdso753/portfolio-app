@@ -199,9 +199,11 @@ p {
 .home__avatar {
   display: block;
   width: 220px;
-  height: 220px;
+  height: auto;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 50%;
+  object-position: center;
+  border-radius: var(--size-border-radius);
   border: 2px solid var(--color-light-white);
 }
 
@@ -341,11 +343,11 @@ p {
    08. 기술 목록 및 아코디언
    ========================================================================== */
 #about,
-#skills {
+#personal {
   background-color: var(--color-white);
 }
 
-#skills h1 {
+#personal h1 {
   color: var(--color-black);
 }
 
@@ -461,12 +463,36 @@ p {
 /* ==========================================================================
    09. 프로젝트 목록
    ========================================================================== */
-#work {
+#work,
+#skills {
   background-color: var(--color-pink);
 }
 
-#work h1 {
+#work h1,
+#skills h1 {
   color: var(--color-white);
+}
+
+.project-panel__media--cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #fff8f7;
+  text-align: center;
+}
+
+.project-cover__label {
+  color: var(--color-light-grey);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.project-cover__title {
+  color: var(--color-dark-grey);
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: var(--weight-bold);
 }
 
 .work__projects {
@@ -986,7 +1012,7 @@ button.contact__link {
     width: clamp(160px, 45vw, 220px);
     max-width: 100%;
     height: auto;
-    aspect-ratio: 1;
+    aspect-ratio: 3 / 4;
     justify-self: center;
   }
 
