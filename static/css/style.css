@@ -137,6 +137,9 @@ p {
 }
 
 .navbar__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: white;
@@ -1060,14 +1063,33 @@ button.contact__link {
   }
 
   .navbar__menu {
+    display: flex;
     flex-direction: column;
     text-align: center;
     width: 100%;
-    display: none;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: max-height 420ms ease, margin 420ms ease, opacity 240ms ease, visibility 0s linear 420ms;
   }
 
   .navbar__menu.open {
-    display: block;
+    max-height: 240px;
+    margin-top: 8px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: max-height 420ms ease, margin 420ms ease, opacity 240ms ease, visibility 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .navbar__menu,
+    .navbar__menu.open {
+      transition: none;
+    }
   }
 
   /* 공통 섹션 */
