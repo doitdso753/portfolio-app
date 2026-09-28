@@ -325,7 +325,7 @@
 
 .case-experience dl > div {
   display: grid;
-  grid-template-columns: 48px minmax(0, 1fr);
+  grid-template-columns: 72px minmax(0, 1fr);
   gap: 16px;
   margin-top: 16px;
 }
@@ -334,6 +334,7 @@
   font-size: 15px;
   line-height: 1.8;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .case-experience dd {
