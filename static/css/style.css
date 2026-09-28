@@ -486,12 +486,18 @@ p {
 /* ==========================================================================
    09. 프로젝트 목록
    ========================================================================== */
-#work,
+#work {
+  background-color: var(--color-white);
+}
+
 #skills {
   background-color: var(--color-pink);
 }
 
-#work h1,
+#work h1 {
+  color: var(--color-black);
+}
+
 #skills h1 {
   color: var(--color-white);
 }
@@ -520,39 +526,25 @@ p {
 
 .work__projects {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 32px;
   width: 100%;
   margin-top: 40px;
 }
 
 .project-panel {
-  position: relative;
   min-width: 0;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-light-white);
-  border-radius: var(--size-border-radius);
   text-align: left;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-  transition: box-shadow var(--animation-duration) ease, transform var(--animation-duration) ease;
 }
 
-.project-panel:hover,
-.project-panel:focus-within {
-  z-index: 1;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-  transform: scale(1.02);
+.project-panel:hover .project-panel__media,
+.project-panel:focus-within .project-panel__media {
+  border-color: var(--color-dark-grey);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .project-panel {
-    transition: box-shadow var(--animation-duration) ease;
-  }
-
-  .project-panel:hover,
-  .project-panel:focus-within {
-    transform: none;
-  }
+.project-panel:hover .project-panel__more,
+.project-panel:focus-within .project-panel__more {
+  color: var(--color-black);
 }
 
 .project-panel__link {
@@ -560,8 +552,7 @@ p {
   flex-direction: column;
   height: 100%;
   color: var(--color-dark-grey);
-  border-radius: var(--size-border-radius);
-  overflow: hidden;
+  border-radius: 16px;
 }
 
 .project-panel__link:focus-visible {
@@ -575,10 +566,12 @@ p {
   width: 100%;
   aspect-ratio: 16 / 9;
   min-height: 0;
-  padding: 8px;
+  padding: 0;
   overflow: hidden;
-  background-color: var(--color-light-white);
-  border-bottom: 1px solid var(--color-light-white);
+  background-color: var(--color-white);
+  border: 2px solid rgba(77, 77, 77, 0.35);
+  border-radius: 16px;
+  transition: border-color var(--animation-duration) ease;
 }
 
 .project-panel__img {
@@ -587,8 +580,8 @@ p {
   display: block;
   width: 100%;
   height: 100%;
-  padding: inherit;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top;
 }
 
 .project-panel__content {
@@ -596,14 +589,52 @@ p {
   flex: 1;
   flex-direction: column;
   min-width: 0;
-  padding: 24px;
+  padding: 20px 0 0;
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
 
-.project-panel__title {
+.project-panel__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.project-panel__more {
+  flex-shrink: 0;
   color: var(--color-dark-grey);
-  margin: 0 0 12px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.project-panel__more span {
+  margin-left: 4px;
+  font-size: 20px;
+}
+
+.project-panel__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 16px;
+}
+
+.project-panel__category {
+  color: #a14642;
+  font-size: 14px;
+  font-weight: var(--weight-semi-bold);
+}
+
+.project-panel__title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--color-dark-grey);
+  margin: 0;
   font-size: 24px;
   line-height: 1.4;
 }
@@ -623,7 +654,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 20px 0;
+  margin: 20px 0 0;
   padding: 0;
 }
 
@@ -637,7 +668,8 @@ p {
 }
 
 .project-panel__period {
-  margin: auto 0 0;
+  margin: 0;
+  color: var(--color-dark-grey);
   font-size: var(--font-small);
   line-height: 1.6;
 }
@@ -1151,15 +1183,15 @@ button.contact__link {
   }
 
   .project-panel__media {
-    padding: 8px;
+    border-radius: 12px;
   }
 
   .project-panel__content {
-    padding: 20px;
+    padding: 16px 0 0;
   }
 
   .project-panel__title {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .project-panel__description,
@@ -1247,7 +1279,7 @@ button.contact__link {
   }
 }
 
-/* 프로젝트 카드는 태블릿에서도 3열을 유지하고 모바일에서만 1열로 전환 */
+/* 프로젝트 카드는 2열로 배치하고 모바일에서는 1열로 전환 */
 @media screen and (max-width: 599px) {
   .work__projects {
     grid-template-columns: minmax(0, 1fr);
