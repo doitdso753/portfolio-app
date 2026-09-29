@@ -149,7 +149,7 @@ p {
   display: flex;
 }
 
-.navbar__menu__item {
+.navbar__menu-item {
   padding: 8px 12px;
   margin: 0 4px;
   color: var(--color-white);
@@ -158,7 +158,7 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item:hover {
+.navbar__menu-item:hover {
   border-color: var(--color-white);
   background-color: var(--color-dark-pink);
 }
