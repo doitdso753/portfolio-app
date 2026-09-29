@@ -622,7 +622,7 @@ p {
 }
 
 .project-panel__category {
-  color: #a14642;
+  color: var(--color-dark-pink);
   font-size: 14px;
   font-weight: var(--weight-semi-bold);
 }
