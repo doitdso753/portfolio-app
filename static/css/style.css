@@ -345,13 +345,12 @@ p {
 /* ==========================================================================
    08. 기술 목록 및 아코디언
    ========================================================================== */
-#about,
-#personal {
-  background-color: var(--color-white);
+#about {
+  background-color: var(--color-pink);
 }
 
-#personal h1 {
-  color: var(--color-black);
+#about > .section__container > h1 {
+  color: var(--color-white);
 }
 
 .skills__list {
