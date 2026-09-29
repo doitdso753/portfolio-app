@@ -179,7 +179,6 @@ p {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  min-height: 100svh;
   background: url('../imgs/home-background.png') center/cover no-repeat;
   padding: 128px clamp(24px, 5vw, 64px) 64px;
   text-align: left;
