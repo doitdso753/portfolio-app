@@ -15,18 +15,18 @@
     <script src="../static/js/image-modal.js" defer></script>
     <script src="../static/js/detail.js" defer></script>
   </head>
-  <body class="case-page">
-    <main id="detail-panel" class="case-main">
-      <header class="case-header">
-        <a class="case-back" href="/">← 프로젝트 목록</a>
-        <p class="case-eyebrow">사내 프로젝트</p>
+  <body class="detail-page">
+    <main id="detail-panel" class="detail-page__main">
+      <header class="detail-page__header">
+        <a class="detail-page__back" href="/">← 프로젝트 목록</a>
+        <p class="detail-page__eyebrow">사내 프로젝트</p>
         <h1>적립&amp;매장 마케팅 서비스</h1>
-        <p class="case-intro">
+        <p class="detail-page__intro">
           소상공인 매장의 고객 관리와 재방문 마케팅을 지원하는 서비스입니다. <br>
           적립, 쿠폰 발급, 선물하기 기능을 통해 고객의 재방문과 구매를 유도합니다.
           관리자 대시보드를 통해 사장님이 고객 현황과 마케팅 활동을 관리할 수 있도록 지원합니다.
         </p>
-        <dl class="case-meta">
+        <dl class="detail-page__meta">
           <div>
             <dt>진행 기간</dt>
             <dd>2017.08 ~ 2020.09</dd>
@@ -45,40 +45,40 @@
           </div>
         </dl>
       </header>
-      <div class="case-layout">
-        <nav class="case-nav" aria-label="프로젝트 상세 목차">
-          <div class="case-nav__header">
-            <p class="case-nav__title">목차</p>
-            <a class="case-nav__home" href="/"><i class="fab fa-diaspora" aria-hidden="true"></i><span>박소현 포트폴리오</span></a>
-            <button class="case-nav__toggle" type="button" aria-expanded="false" aria-controls="case-nav-list" aria-label="목차 열기">
+      <div class="detail-page__layout">
+        <nav class="navbar" aria-label="프로젝트 상세 목차">
+          <div class="navbar__header">
+            <p class="navbar__title">목차</p>
+            <a class="navbar__home" href="/"><i class="fab fa-diaspora" aria-hidden="true"></i><span>박소현 포트폴리오</span></a>
+            <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="navbar-list" aria-label="목차 열기">
               <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
           </div>
-          <ol class="case-nav__list" id="case-nav-list">
+          <ol class="navbar__list" id="navbar-list">
             <li><a href="#outcomes"><span>핵심 기여·성과</span></a></li>
             <li><a href="#responsibilities"><span>담당 업무</span></a></li>
-            <li><a href="#experience"><span>주요 경험</span></a></li>
+            <li><a href="#issues"><span>개발 이슈</span></a></li>
             <li><a href="#technology"><span>기술 구성</span></a></li>
             <li><a href="#screens"><span>서비스 화면</span></a></li>
           </ol>
         </nav>
-        <div class="case-content">
-          <section class="case-section" id="outcomes" aria-labelledby="outcomes-title">
+        <div class="detail-page__content">
+          <section class="detail-page__section" id="outcomes" aria-labelledby="outcomes-title">
             <h2 id="outcomes-title">핵심 기여·성과</h2>
-            <div class="case-outcomes">
-              <article class="case-outcome">
-                <p class="case-outcome__label">사장님 가입신청 온라인화</p>
+            <div class="detail-page__outcomes">
+              <article class="detail-page__outcome">
+                <p class="detail-page__outcome-label">사장님 가입신청 온라인화</p>
                 <h3>7일 → 3일 단축</h3>
                 <p>오프라인 중심의 입점 프로세스를 온라인으로 전환하여 업무 프로세스 표준화</p>
               </article>
-              <article class="case-outcome">
-                <p class="case-outcome__label">2인 개발 체제로</p>
+              <article class="detail-page__outcome">
+                <p class="detail-page__outcome-label">2인 개발 체제로</p>
                 <h3>핵심 서비스 통합 구현</h3>
                 <p>결제부터 쿠폰, 적립, 선물 기능 고객 앱과 매장용 POS 앱을 개발하고 이를 관리하는 관리자 사이트 구축</p>
               </article>
             </div>
           </section>
-          <section class="case-section" id="responsibilities" aria-labelledby="responsibilities-title">
+          <section class="detail-page__section" id="responsibilities" aria-labelledby="responsibilities-title">
             <h2 id="responsibilities-title">담당 업무</h2>
             <ul class="content-list">
               <li>Android 하이브리드 모바일 앱 개발</li>
@@ -89,13 +89,9 @@
               <li>기능 추가에 따른 DB 스키마 설계</li>
             </ul>
           </section>
-          <section class="case-section" id="experience" aria-labelledby="experience-title">
-            <h2 id="experience-title">주요 경험</h2>
-            <article class="case-experience">
-              <h3>
-                <span class="case-number">01</span>
-                고객 앱과 매장 POS 연동
-              </h3>
+          <section class="detail-page__section" id="issues" aria-labelledby="issues-title">
+            <h2 id="issues-title">개발 이슈</h2>
+            <article class="detail-page__issue">
               <dl>
                 <div>
                   <dt>과제</dt>
@@ -111,11 +107,7 @@
                 </div>
               </dl>
             </article>
-            <article class="case-experience">
-              <h3>
-                <span class="case-number">02</span>
-                매장용 POS와 관리자 기능 개발
-              </h3>
+            <article class="detail-page__issue">
               <dl>
                 <div>
                   <dt>과제</dt>
@@ -131,11 +123,7 @@
                 </div>
               </dl>
             </article>
-            <article class="case-experience">
-              <h3>
-                <span class="case-number">03</span>
-                결제 API 연동
-              </h3>
+            <article class="detail-page__issue">
               <dl>
                 <div>
                   <dt>과제</dt>
@@ -152,50 +140,50 @@
               </dl>
             </article>
           </section>
-          <section class="case-section" id="technology" aria-labelledby="technology-title">
+          <section class="detail-page__section" id="technology" aria-labelledby="technology-title">
             <h2 id="technology-title">기술 구성</h2>
-            <h3 class="case-architecture-title">시스템 구성도</h3>
-            <figure class="case-architecture">
+            <h3 class="detail-page__architecture-title">시스템 구성도</h3>
+            <figure class="detail-page__architecture">
               <button class="detail-item__gallery" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" data-image-modal-alt="또와요 시스템 구성도" aria-label="또와요 시스템 구성도 크게 보기">
                 <img src="../static/imgs/projects/ttowayo/ttowayo-system-architecture.svg" alt="또와요 시스템 구성도">
               </button>
             </figure>
-            <ul class="case-architecture-list">
+            <ul class="detail-page__architecture-list">
               <li>고객용 모바일 앱, 매장 POS 앱, 관리자 사이트로 구성된 적립&amp;매장 마케팅 서비스입니다.</li>
               <li>모바일 앱과 POS 앱은 Service API를 통해 회원, 적립, 쿠폰, 선물 데이터를 처리하도록 설계했으며, 결제 기능은 별도 Pay API로 분리해 PG사 연동했습니다.</li>
               <li>관리자 사이트는 Laravel 기반으로 구축하여 매장, 쿠폰, 이벤트, 회원 정보를 통합 관리할 수 있도록 구현했습니다.</li>
               <li>서비스 데이터는 MySQL에 저장하고 이미지 및 첨부 파일은 Object Storage에 분리 저장했습니다.</li>
             </ul>
-            <h3 class="case-stack-title">기술 스택</h3>
-            <table class="case-stack">
+            <h3 class="detail-page__stack-title">기술 스택</h3>
+            <table class="detail-page__stack">
               <caption class="sr-only">분류별 사용 기술</caption>
-              <colgroup><col class="case-stack__category"><col></colgroup>
+              <colgroup><col class="detail-page__stack-category"><col></colgroup>
               <tbody>
                 <tr>
                   <th scope="row">Frontend</th>
-                  <td><ul class="case-stack__items"><li>Vue.js</li><li>JavaScript</li><li>Android</li><li>C# Windows Forms</li><li>Socket.io</li></ul></td>
+                  <td><ul class="detail-page__stack-items"><li>Vue.js</li><li>JavaScript</li><li>Android</li><li>C# Windows Forms</li><li>Socket.io</li></ul></td>
                 </tr>
                 <tr>
                   <th scope="row">Backend</th>
-                  <td><ul class="case-stack__items"><li>PHP Laravel</li></ul></td>
+                  <td><ul class="detail-page__stack-items"><li>PHP Laravel</li></ul></td>
                 </tr>
                 <tr>
                   <th scope="row">Database</th>
-                  <td><ul class="case-stack__items"><li>MySQL</li></ul></td>
+                  <td><ul class="detail-page__stack-items"><li>MySQL</li></ul></td>
                 </tr>
                 <tr>
                   <th scope="row">Tools/Infra</th>
-                  <td><ul class="case-stack__items"><li>Linux</li><li>Ncloud Object Storage</li><li>Git</li><li>GitLab</li><li>Notion</li><li>IntelliJ</li></ul></td>
+                  <td><ul class="detail-page__stack-items"><li>Linux</li><li>Ncloud Object Storage</li><li>Git</li><li>GitLab</li><li>Notion</li><li>IntelliJ</li></ul></td>
                 </tr>
               </tbody>
             </table>
           </section>
-          <section class="case-section" id="screens" aria-labelledby="screens-title">
+          <section class="detail-page__section" id="screens" aria-labelledby="screens-title">
             <h2 id="screens-title">서비스 화면</h2>
-            <article class="case-screen-group">
+            <article class="detail-page__screen-group">
               <h3>고객용 모바일 앱</h3>
               <p>고객은 모바일 앱에서 매장별 적립 상태와 쿠폰을 확인하고 매장에서 제공하는 혜택을 확인할 수 있습니다.</p>
-              <div class="case-gallery case-gallery--portrait">
+              <div class="detail-page__gallery detail-page__gallery--portrait">
                 <figure>
                   <button class="detail-item__gallery-item" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-app-01.png" data-image-modal-alt="또와요 앱 메인 화면" aria-label="또와요 앱 메인 화면 크게 보기">
                     <img loading="lazy" decoding="async" src="../static/imgs/projects/ttowayo/ttowayo-app-01.png" alt="또와요 앱 메인 화면">
@@ -216,10 +204,10 @@
                 </figure>
               </div>
             </article>
-            <article class="case-screen-group">
+            <article class="detail-page__screen-group">
               <h3>관리자 사이트</h3>
               <p>또와요 서비스에 계약한 사장님께 도장/포인트 적립 관리, 쿠폰 관리, 고객 관리를 위해 제공하는 관리자 사이트입니다.</p>
-              <div class="case-gallery">
+              <div class="detail-page__gallery">
                 <figure>
                   <button class="detail-item__gallery-item" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-01.png" data-image-modal-alt="대시보드 화면" aria-label="대시보드 화면 크게 보기">
                     <img loading="lazy" decoding="async" src="../static/imgs/projects/ttowayo/ttowayo-dashboard-site-01.png" alt="대시보드 화면">
@@ -246,10 +234,10 @@
                 </figure>
               </div>
             </article>
-            <article class="case-screen-group">
+            <article class="detail-page__screen-group">
               <h3>매장용 POS 앱</h3>
               <p>사장님이 매장에서 QR 코드와 핸드폰 번호로 고객에게 쉽게 적립, 쿠폰/선물 사용할 수 있도록 제공하는 POS 앱입니다.</p>
-              <div class="case-gallery">
+              <div class="detail-page__gallery">
                 <figure>
                   <button class="detail-item__gallery-item" type="button" data-image-modal-trigger data-image-modal-src="../static/imgs/projects/ttowayo/ttowayo-pos-app-01.png" data-image-modal-alt="대시보드 화면" aria-label="대시보드 화면 크게 보기">
                     <img loading="lazy" decoding="async" src="../static/imgs/projects/ttowayo/ttowayo-pos-app-01.png" alt="대시보드 화면">
@@ -277,8 +265,8 @@
               </div>
             </article>
           </section>
-          <footer class="case-footer">
-            <a class="case-back" href="/">← 프로젝트 목록으로 돌아가기</a>
+          <footer class="detail-page__footer">
+            <a class="detail-page__back" href="/">← 프로젝트 목록으로 돌아가기</a>
           </footer>
         </div>
       </div>

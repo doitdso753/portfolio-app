@@ -3,7 +3,7 @@
 (function () {
   const common = window.PortfolioCommon;
 
-  document.querySelectorAll('.case-back').forEach((link) => {
+  document.querySelectorAll('.detail-page__back').forEach((link) => {
     link.addEventListener('click', (event) => {
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       if (!('BroadcastChannel' in window)) return;
@@ -29,10 +29,10 @@
     });
   });
   const detailItems = document.querySelectorAll('[data-detail-item]');
-  const sectionLinks = Array.from(document.querySelectorAll('.case-nav a[href^="#"]'));
+  const sectionLinks = Array.from(document.querySelectorAll('.detail-page .navbar a[href^="#"]'));
   const sections = sectionLinks.map((link) => document.querySelector(link.getAttribute('href')));
-  const navToggle = document.querySelector('.case-nav__toggle');
-  const navList = document.querySelector('.case-nav__list');
+  const navToggle = document.querySelector('.detail-page .navbar__toggle');
+  const navList = document.querySelector('.detail-page .navbar__list');
 
   if (navToggle != null && navList != null) {
     const setNavOpen = (isOpen) => {
