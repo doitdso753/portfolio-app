@@ -57,6 +57,7 @@
             <li><a href="#outcomes"><span>핵심 기여·성과</span></a></li>
             <li><a href="#responsibilities"><span>담당 업무</span></a></li>
             <li><a href="#issues"><span>개발 이슈</span></a></li>
+            <li><a href="#learnings"><span>개발 후 느낀점</span></a></li>
             <li><a href="#technology"><span>기술 구성</span></a></li>
             <li><a href="#screens"><span>서비스 화면</span></a></li>
           </ol>
@@ -137,6 +138,17 @@
                 </div>
               </dl>
             </article>
+          </section>
+          <section class="detail-page__section" id="learnings" aria-labelledby="learnings-title">
+            <h2 id="learnings-title">개발 후 느낀점</h2>
+            <div class="detail-page__learnings">
+              <p>MSA 컨테이너 환경에서 Kafka 기반 작업 처리부터 각 도메인 서비스와 외부 API 연동까지 연결되는 전체 데이터 흐름을 이해하여 개발할 수 있었습니다. 마켓마다 다른 데이터 구조와 정책을 표준화해 내부 서비스에 적용하는 설계 방식을 경험할 수 있었습니다.</p>
+              <p>판매 채널마다 다른 정책을 설정으로 분리하면 기존 구조를 지키면서도 확장성을 확보할 수 있었습니다.</p>
+              <p>공통 컴포넌트는 재사용 범위와 변경 가능성을 함께 고려해야 과도한 추상화를 피할 수 있었습니다.</p>
+              <p>클라이언트 상태와 서버 상태의 역할을 구분하면 복잡한 관리 화면도 예측 가능하게 구성할 수 있었습니다.</p>
+              <p>백오피스도 운영자가 매일 사용하는 제품이므로 업무 흐름과 오류 대응까지 세심하게 설계해야 했습니다.</p>
+              <p>외부 API의 제약에 대응하려면 대체 수집 방식뿐 아니라 실패 감지와 유지보수 기준도 필요하다는 점을 배웠습니다.</p>
+            </div>
           </section>
           <section class="detail-page__section" id="technology" aria-labelledby="technology-title">
             <h2 id="technology-title">기술 구성</h2>

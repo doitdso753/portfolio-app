@@ -347,17 +347,17 @@
 .detail-page__learnings {
   max-width: 760px;
   margin: 0;
-  padding: 24px 24px 24px 44px;
+  padding: 24px;
   background-color: #fff8f7;
   border-left: 4px solid var(--color-pink);
   border-radius: var(--size-border-radius);
 }
 
-.detail-page__learnings li {
-  list-style: disc;
+.detail-page__learnings p {
+  margin: 0;
 }
 
-.detail-page__learnings li + li {
+.detail-page__learnings p + p {
   margin-top: 12px;
 }
 
