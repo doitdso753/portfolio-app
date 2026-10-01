@@ -93,48 +93,36 @@
             <article class="detail-page__issue">
               <dl>
                 <div>
-                  <dt>문제</dt>
-                  <dd>마켓마다 데이터 구조가 다르고, Open API로 제공하지 않는 데이터도 있었습니다.</dd>
+                  <dt>이슈</dt>
+                  <dd>에이블리와 내부 서비스의 데이터 구조가 다르고 일부 데이터는 Open API에서 미제공</dd>
                 </div>
                 <div>
-                  <dt>실행</dt>
-                  <dd>마켓별 데이터를 서비스 공통 모델로 변환하고, Open API에 없는 데이터는 Puppeteer로 수집했습니다.</dd>
-                </div>
-                <div>
-                  <dt>결과</dt>
-                  <dd>기존 서비스 구조를 유지하면서 신규 판매 채널을 연동하고 필요한 데이터를 처리할 수 있도록 구현했습니다.</dd>
+                  <dt>해결</dt>
+                  <dd>Open API를 분석해 데이터를 공통 모델로 표준화하고 미제공 데이터는 Puppeteer로 수집해 보완했습니다. 다른 마켓에 영향을 주지 않으면서 상품, 주문, 배송 프로세스를 연동했습니다.</dd>
                 </div>
               </dl>
             </article>
             <article class="detail-page__issue">
               <dl>
                 <div>
-                  <dt>과제</dt>
-                  <dd>신규 마켓 추가에 대응할 수 있는 UI 구조가 필요했습니다.</dd>
+                  <dt>이슈</dt>
+                  <dd>마켓별 처리 로직이 컴포넌트에 누적되어 마켓이 추가될수록 유지보수가 어려워지는 문제</dd>
                 </div>
                 <div>
-                  <dt>실행</dt>
-                  <dd>Atomic Design과 Storybook으로 공통 컴포넌트를 구성하고 마켓 정책을 Configuration으로 분리했습니다.</dd>
-                </div>
-                <div>
-                  <dt>결과</dt>
-                  <dd>신규 마켓 추가 시 컴포넌트 수정 없이 확장할 수 있는 구조를 설계했습니다.</dd>
+                  <dt>해결</dt>
+                  <dd>프론트엔드에서는 마켓별 정책과 설정을 JSON Configuration으로 분리해 신규 마켓 추가 시 공통 컴포넌트의 변경 범위를 최소화했습니다.</dd>
                 </div>
               </dl>
             </article>
             <article class="detail-page__issue">
               <dl>
                 <div>
-                  <dt>문제</dt>
-                  <dd>운영 과정에서 개발자가 직접 DB를 수정해야 하는 반복 업무가 있었습니다.</dd>
+                  <dt>이슈</dt>
+                  <dd>기초 데이터의 등록, 수정이 필요할 때마다 개발자가 직접 DB를 수정해야 하는 반복 업무 발생</dd>
                 </div>
                 <div>
-                  <dt>실행</dt>
-                  <dd>Next.js 기반 백오피스를 구축했습니다. CRUD 화면을 공통 컴포넌트로 설계하고 Redux와 SWR의 역할을 분리했습니다. 택배사, 카테고리 매핑 관리, 엑셀 일괄 등록, 데이터 변경 이력을 확인하는 액션 로그 기능을 구현했습니다.</dd>
-                </div>
-                <div>
-                  <dt>결과</dt>
-                  <dd>운영팀이 기초 데이터를 직접 관리할 수 있는 환경을 마련하고 운영 효율을 높였습니다.</dd>
+                  <dt>해결</dt>
+                  <dd>택배사, 카테고리 매핑 등 기초 데이터를 직접 관리할 수 있는 백오피스 기능을 구현했습니다.</dd>
                 </div>
               </dl>
             </article>
