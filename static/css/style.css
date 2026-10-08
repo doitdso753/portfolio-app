@@ -568,7 +568,7 @@ p {
   overflow: hidden;
   background-color: var(--color-white);
   border: 2px solid rgba(77, 77, 77, 0.35);
-  border-radius: 16px;
+  border-radius: var(--size-border-radius);
   transition: border-color var(--animation-duration) ease;
 }
 
@@ -1174,10 +1174,6 @@ button.contact__link {
   .work__projects {
     gap: 40px 24px;
     margin-top: 28px;
-  }
-
-  .project-panel__media {
-    border-radius: 12px;
   }
 
   .project-panel__content {
