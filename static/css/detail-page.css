@@ -454,23 +454,7 @@
 }
 
 .detail-page__stack-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
   margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.detail-page__stack-items li {
-  padding: 5px 10px;
-  color: var(--color-dark-grey);
-  background-color: #fff8f7;
-  border: 1px solid #edcfcd;
-  border-radius: var(--size-border-radius);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.5;
 }
 
 /* ==========================================================================

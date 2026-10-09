@@ -279,6 +279,31 @@ p {
   margin: auto;
 }
 
+/* 공통 태그 목록 */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list > .tag-item {
+  padding: 5px 10px;
+  color: var(--color-dark-grey);
+  background-color: #fff8f7;
+  border: 1px solid #edcfcd;
+  border-radius: var(--size-border-radius);
+  font-size: 15px;
+  font-weight: var(--weight-semi-bold);
+  line-height: 1.5;
+}
+
+.tag-list--small > .tag-item {
+  font-size: 13px;
+  font-weight: var(--weight-regular);
+}
+
 /* ==========================================================================
    07. 자기소개
    ========================================================================== */
@@ -407,21 +432,9 @@ p {
 }
 
 .skill-item__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
   grid-column: 1 / -1;
   grid-row: 3;
   margin-top: 4px;
-}
-
-.skill-item__tag {
-  padding: 4px 10px;
-  border-radius: var(--size-border-radius);
-  background-color: var(--color-light-white);
-  color: var(--color-dark-grey);
-  font-size: 13px;
-  line-height: 1.5;
 }
 
 .skill-item__header i {
@@ -649,20 +662,7 @@ p {
 }
 
 .project-panel__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
   margin: 20px 0 0;
-  padding: 0;
-}
-
-.project-panel__tag {
-  padding: 4px 10px;
-  border-radius: var(--size-border-radius);
-  background-color: var(--color-light-white);
-  color: var(--color-dark-grey);
-  font-size: 13px;
-  line-height: 1.5;
 }
 
 .project-panel__period {
